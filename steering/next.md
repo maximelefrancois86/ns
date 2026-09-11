@@ -21,12 +21,16 @@
    ce dépôt sans ton accord — dis-moi si je le fais, et sur quelle branche.
    Il faut aussi l'ajouter au tableau de `ssn/scripts/README.md`.
 
-5. **Quels contrôles ajouter à `check_repository.ldpy` ?** Deux me seraient
-   utiles ici : que toute ontologie déclarée ait une maison sous `/ns/sosa/` ou
-   `/ns/ssn/` — aujourd'hui `sosa-sdo.ttl` déclare `https://example.org/…` et
-   n'en a pas — et le retour de la section `=== Ontology Declarations ===`, que
-   ta réécriture en ldpy a fait disparaître. Le script de placement ne s'en sert
-   pas (il redérive tout), mais c'est la table qu'un humain veut lire.
+5. **`check_repository.ldpy` a gagné `check_publication()`**, puisque tu l'avais
+   ouvert : la section `=== Ontology Declarations ===` est de retour, et deux
+   contrôles non fatals s'y ajoutent — toute ontologie déclarée doit avoir une
+   maison sous `/ns/sosa/` ou `/ns/ssn/` (`sosa-sdo.ttl` n'en a pas, il déclare
+   `https://example.org/…`), et toute `owl:versionIRI` doit être l'IRI
+   d'ontologie avec une édition de plus. À relire, et à committer avec le reste.
+
+   Au passage : sur la branche `ldpy-checks`, le script échoue déjà sur trois
+   contrôles qui n'ont rien à voir avec nous — liens internes cassés, termes
+   utilisés jamais définis, termes sans label ni définition.
 
 ## Prochaines étapes
 

@@ -76,6 +76,7 @@ qui casse la cohérence n'est pas terminée.
 | Chemin | Contenu | Durée de vie |
 |---|---|---|
 | `steering/next.md` | **Uniquement** les demandes de Claude à Maxime, les décisions à prendre, les prochaines étapes. Ni compte rendu, ni analyse, ni historique. Mis à jour à chaque itération : ce qui est fait ou tranché en sort. | vivant, court |
+| `steering/design/<sujet>.md` | Une fiche par question de conception, avec ses interrogation, la version longue des questions ouvertes, etc. | vivant, court à moyen |
 | `steering/decisions/<sujet>.md` | Une fiche par décision tranchée : la décision, la date, pourquoi, ce qu'elle implique. Ce qui quitte `next.md` parce que c'est tranché arrive ici. | permanent |
 | `steering/steps/AAAA-MM-JJTHHMM_sujet.md` | Une fiche par itération de travail : ce qui a été fait, ce qui a été trouvé, ce qui reste. C'est l'historique. | permanent, jamais réécrit |
 | `scripts/` | L'outillage de transition : placement des fichiers RDF depuis `../sdw-sosa-ssn`, génération des sérialisations. Son emplacement définitif reste à trancher (voir `steering/next.md`). | à trancher |

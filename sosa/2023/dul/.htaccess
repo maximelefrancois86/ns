@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule  ^$  sosa-dul.ttl [L]
+RewriteRule  ^sosa-dul/?$  sosa-dul.ttl [L]

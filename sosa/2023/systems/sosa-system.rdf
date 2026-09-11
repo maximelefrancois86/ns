@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:schema1="http://schema.org/"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+>
+  <rdf:Description rdf:nodeID="n1dd05737d6804be6b301eb0d65e61051b1">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <foaf:name xml:lang="en">W3C/OGC Spatio-temporal Data on the Web Working Group</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasOperatingConditions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has operating conditions</rdfs:label>
+    <skos:definition xml:lang="en">
+  Relation between a System and its Operating Conditions, modelled as ObservationCollection (or Observation) describing
+  conditions under which the System can operate. A short but extensible list of sub-classes of OperatingConditions is
+  provided in SSN-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.
+  </skos:definition>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/System"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/OperatingConditions"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/systems/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Battery">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/System"/>
+    <rdfs:label xml:lang="en">Battery</rdfs:label>
+    <skos:definition xml:lang="en">A Battery powering a System as its primary or secondary power source. As this is a specialization of the System class modeling of integrated battery management systems is also possible.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/systems/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/systems/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <dcterms:title xml:lang="en">Ontology of operating conditions and capabilities of systems</dcterms:title>
+    <dcterms:description xml:lang="en">The System Capabilities Module imports SOSA and adds classes and properties required for the description of the operating conditions and capabilities of systems, particularly Sensors and Actuators.</dcterms:description>
+    <dcterms:creator rdf:nodeID="n1dd05737d6804be6b301eb0d65e61051b1"/>
+    <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
+    <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+    <rdfs:comment xml:lang="en">Please report any errors to the W3C Spatio-temporal Data on the Web Working Group via the SDW WG Public List public-sdw-wg@w3.org</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology"/>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-05-14</dcterms:created>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-24</dcterms:modified>
+    <vann:preferredNamespacePrefix>sosa</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>http://www.w3.org/ns/sosa/</vann:preferredNamespaceUri>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/NormalOperatingConditions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/OperatingConditions"/>
+    <rdfs:label xml:lang="en">Normal Operating Conditions</rdfs:label>
+    <skos:definition xml:lang="en">
+  Type of observation or observation collection that describe the conditions under which a system is expected to operate normally.
+  </skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/systems/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SurvivableConditions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/OperatingConditions"/>
+    <rdfs:label xml:lang="en">Survivable Conditions</rdfs:label>
+    <skos:definition xml:lang="en">
+  Type of observation or observation collection that describe the conditions under which a system is expected to survive, that is to continue to exist in its current form,
+  even if its future operations are impaired. A typical example is the temperature at which a sensor looses physical integrity and looses its shape.
+  A system or sensor exposed to conditions outside of those reported by SurvivableConditions will no longer be serviceable.
+  </skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/systems/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasSystemCapability">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/System"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdfs:label xml:lang="en">has system capability</rdfs:label>
+    <skos:definition xml:lang="en">Relation between a System and an ObservationCollection (or Observation) describing the capability of the system. A sensor or system may have more than one set of system capabilities with different validity contexts.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/systems/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasValidityContext">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <rdfs:label xml:lang="en">has validity context</rdfs:label>
+    <skos:definition xml:lang="en">Links a an observation collection or observation (typically about the system capabilities) or a property (typically about the system capabilities) to its validity context, described as an observation collection or observation (typically about the system environment).</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/systems/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SuboptimalOperatingConditions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/OperatingConditions"/>
+    <rdfs:label xml:lang="en">Suboptimal Conditions</rdfs:label>
+    <skos:definition xml:lang="en">
+ Type of observation or observation collection that describe the conditions under which a system is expected to operate sub-optimally.
+ Results will still be reported but the performance of the sensor, in term of precision for example, will be impaired.
+  </skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/systems/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/OperatingConditions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Operating Conditions</rdfs:label>
+    <skos:definition xml:lang="en">
+  Type of observation or observation collection that describe operating conditions of systems.
+  Sub-classes of this class explicit the desirability of the conditions.
+  Three such sub-classes are provided as a basic classification:
+  NormalOperatingConditions, SuboptimalOperatingConditions, and SurvivableConditions.
+  </skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/systems/"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,30 @@
+RewriteEngine On
+
+<Files ~ "sosa\.rdf$">
+    Header set Content-Disposition "inline; filename=sosa.rdf"
+</Files>
+
+<Files ~ "sosa\.ttl$">
+    Header set Content-Disposition "inline; filename=sosa.ttl"
+</Files>
+
+<Files ~ "om\.rdf$">
+    Header set Content-Disposition "inline; filename=sosa-om.rdf"
+</Files>
+
+<Files ~ "om\.ttl$">
+    Header set Content-Disposition "inline; filename=sosa-om.ttl"
+</Files>
+
+<Files ~ "oboe\.rdf$">
+    Header set Content-Disposition "inline; filename=sosa-oboe.rdf"
+</Files>
+
+<Files ~ "oboe\.ttl$">
+    Header set Content-Disposition "inline; filename=sosa-oboe.ttl"
+</Files>
+
+RewriteRule  ^$  sosa.ttl [L]
+RewriteRule  ^sosa/?$  sosa.ttl [L]
+RewriteRule  ^om/?$  om.ttl [L]
+RewriteRule  ^oboe/?$  oboe.ttl [L]

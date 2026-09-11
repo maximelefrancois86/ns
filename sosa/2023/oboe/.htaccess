@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule  ^$  sosa-oboe.ttl [L]
+RewriteRule  ^sosa-oboe/?$  sosa-oboe.ttl [L]

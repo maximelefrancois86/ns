@@ -1,0 +1,27 @@
+meta {
+  name: Test 40 (expects 404)
+  type: http
+  seq: 41
+}
+
+get {
+  url: {{baseUrl}}/x?term=y
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: text/html,*/*;qs=0.8
+}
+
+assert {
+  res.status: eq 404
+  res.headers.content-type: eq "text/html; charset=utf-8"
+}
+
+settings {
+  encodeUrl: false
+  followRedirects: false
+  maxRedirects: 5
+  timeout: inherit
+}

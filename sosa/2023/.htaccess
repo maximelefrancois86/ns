@@ -1,0 +1,21 @@
+RewriteEngine On
+
+<Files sosa.html>
+    ForceType text/html;qs=0.998
+</Files>
+
+RewriteCond  %{QUERY_STRING}  !=""
+RewriteCond  %{QUERY_STRING}  !^term=
+RewriteRule  ^(.*)$  $1?
+
+RewriteRule  ^$  sosa?term= [N]
+
+RewriteCond  %{REQUEST_FILENAME}  !-f
+RewriteCond  %{QUERY_STRING}  =""
+RewriteRule  ^(.*)$  sosa?term=$1 [N]
+
+RewriteCond  %{QUERY_STRING}  ^term=(.+)$
+RewriteRule  ^sosa\.html$  https://www.w3.org/TR/vocab-ssn-2023/#SOSA%1 [R=303,QSD,NE,L]
+
+RewriteCond  %{QUERY_STRING}  ^(term=)?$
+RewriteRule  ^sosa\.html$  https://www.w3.org/TR/vocab-ssn-2023/ [R=303,QSD,NE,L]

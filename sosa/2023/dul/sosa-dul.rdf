@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/dul">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dcterms:creator>Maxime Lefrançois</dcterms:creator>
+    <dcterms:creator rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb1"/>
+    <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+    <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-06</dcterms:created>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-06</dcterms:modified>
+    <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
+    <rdfs:comment xml:lang="en">Alignment of the the W3C/OGC SOSA Ontology with the DOLCE UltraLite upper ontology (DUL).</rdfs:comment>
+    <rdfs:label xml:lang="en">Alignment of SOSA with DUL</rdfs:label>
+    <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb19">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb20"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb16">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb17"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb28">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb21">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb11">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    <rdf:rest rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ExecutionCollection">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"/>
+    <rdfs:subClassOf rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb11"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb20">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
+    <rdf:rest rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb21"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb22">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+    <owl:allValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb27">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+    <rdf:rest rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb28"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb23">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb24"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Deployment">
+    <rdfs:subClassOf rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Execution">
+    <rdfs:subClassOf rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Property">
+    <rdfs:subClassOf rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb19"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Procedure">
+    <rdfs:subClassOf rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb16"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb24">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    <rdf:rest rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb25"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb1">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb4">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+    <rdf:rest rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SampleCollection">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"/>
+    <rdfs:subClassOf rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb22"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Stimulus">
+    <rdfs:subClassOf rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb23"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+    <owl:allValuesFrom rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb10"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb12">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb25">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/System">
+    <rdfs:subClassOf rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb26"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb17">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Method"/>
+    <rdf:rest rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Platform">
+    <rdfs:subClassOf rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb13"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb3">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    <rdf:rest rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb13">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb14"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb18">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb7">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    <rdf:rest rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb14">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+    <rdf:rest rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb15"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb5">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb26">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb27"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb8">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6754b49dfd4e4faaacfccf13daa68d5eb15">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sample">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+  </rdf:Description>
+</rdf:RDF>

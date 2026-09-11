@@ -1,0 +1,8 @@
+RewriteEngine On
+
+<Files ssn-oms.ttl>
+    Header set Content-Disposition "inline; filename=ssn-oms.ttl"
+</Files>
+
+RewriteRule  ^$  ssn-oms.ttl [L]
+RewriteRule  ^ssn-oms/?$  ssn-oms.ttl [L]

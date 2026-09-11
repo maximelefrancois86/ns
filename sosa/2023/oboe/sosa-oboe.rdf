@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#usesProtocol">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/oboe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-03-05</dcterms:created>
+    <dcterms:creator rdf:resource="http://orcid.org/0000-0002-3884-3420"/>
+    <dcterms:creator>Simon J D COX</dcterms:creator>
+    <dcterms:creator rdf:nodeID="n55e8f871d3374fbe96e93559791557a1b7"/>
+    <dcterms:description>Mapping of classes and properties from OBOE to SOSA</dcterms:description>
+    <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+    <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-05-31</dcterms:modified>
+    <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
+    <rdfs:label>OBOE -&gt; SOSA map</rdfs:label>
+    <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasValue">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement">
+    <rdfs:comment>
+  an oboe-core:Measurement is a (atomic) sosa:Observation, whose result (value) is an estimate of the value of one of the characteristics of the observed Entity. 
+  A collection of oboe-core:Measurement individuals together compose an oboe-core:Observation, whose results together provide a full description of the feature of interest. 
+  </rdfs:comment>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Observation">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdfs:subClassOf rdf:nodeID="n55e8f871d3374fbe96e93559791557a1b1"/>
+    <rdfs:subClassOf rdf:nodeID="n55e8f871d3374fbe96e93559791557a1b2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n55e8f871d3374fbe96e93559791557a1b2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n55e8f871d3374fbe96e93559791557a1b7">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic">
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n55e8f871d3374fbe96e93559791557a1b3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasMember"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
+    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Protocol">
+    <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/ObservingProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/rights">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n55e8f871d3374fbe96e93559791557a1b1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasMember"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+    <owl:propertyChainAxiom rdf:nodeID="n55e8f871d3374fbe96e93559791557a1b5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n55e8f871d3374fbe96e93559791557a1b4">
+    <owl:inverseOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#member"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Result">
+    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#measurementFor">
+    <rdfs:subPropertyOf rdf:nodeID="n55e8f871d3374fbe96e93559791557a1b4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#usesMethod">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ObservationCollection">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdfs:subClassOf rdf:nodeID="n55e8f871d3374fbe96e93559791557a1b3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasMember">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/hasMember"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n55e8f871d3374fbe96e93559791557a1b6">
+    <rdf:first rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n55e8f871d3374fbe96e93559791557a1b5">
+    <rdf:first rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#measurementFor"/>
+    <rdf:rest rdf:nodeID="n55e8f871d3374fbe96e93559791557a1b6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Characteristic">
+    <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasMeasurement">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/hasMember"/>
+  </rdf:Description>
+</rdf:RDF>

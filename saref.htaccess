@@ -1,0 +1,154 @@
+RewriteRule ^sources/(.*)$ https://labs.etsi.org/rep/saref/$1 [R=302]
+
+Header set Content-disposition "expr=attachement; filename=%{resp:Content-Location}" "expr=%{resp:Content-Location} =~ /.(rdf|nt|n3)$/"
+Header set Content-disposition "expr=inline; filename=%{resp:Content-Location}" "expr=%{resp:Content-Location} =~ /.+/ && !( %{resp:Content-Location} =~ /.(rdf|nt|n3)$/ )"
+
+RewriteCond %{REQUEST_URI} ^(.*/)?[^/]*$
+RewriteRule ^core/$ %1v4.1.1/ [R=302]
+RewriteCond %{REQUEST_URI} ^(.*/)?[^/]*$
+RewriteRule ^core\.([^\./]+)$ %1core/v4.1.1/saref.$1 [R=302]
+
+RewriteCond %{REQUEST_URI} ^(.*/)?[^/]*$
+RewriteRule ^core/v3$ %1v3.2.1/ [R=302]
+RewriteCond %{REQUEST_URI} ^(.*/)?[^/]*$
+RewriteRule ^core/v3\.([a-z][^\./]*)$ %1v3.2.1/saref.$1 [R=302]
+
+RewriteCond %{REQUEST_URI} ^(.*/)?[^/]*$
+RewriteRule ^core/v3.1$ %1v3.1.1/ [R=302]
+RewriteCond %{REQUEST_URI} ^(.*/)?[^/]*$
+RewriteRule ^core/v3.1\.([a-z][^\./]*)$ %1v3.1.1/saref.$1 [R=302]
+
+RewriteCond %{REQUEST_URI} ^(.*/)?[^/]*$
+RewriteRule ^core/v3.2$ %1v3.2.1/ [R=302]
+RewriteCond %{REQUEST_URI} ^(.*/)?[^/]*$
+RewriteRule ^core/v3.2\.([a-z][^\./]*)$ %1v3.2.1/saref.$1 [R=302]
+
+RewriteCond %{REQUEST_URI} ^(.*/)?[^/]*$
+RewriteRule ^core/v4$ %1v4.1.1/ [R=302]
+RewriteCond %{REQUEST_URI} ^(.*/)?[^/]*$
+RewriteRule ^core/v4\.([a-z][^\./]*)$ %1v4.1.1/saref.$1 [R=302]
+
+RewriteCond %{REQUEST_URI} ^(.*/)?[^/]*$
+RewriteRule ^core/v4.1$ %1v4.1.1/ [R=302]
+RewriteCond %{REQUEST_URI} ^(.*/)?[^/]*$
+RewriteRule ^core/v4.1\.([a-z][^\./]*)$ %1v4.1.1/saref.$1 [R=302]
+
+RewriteCond %{REQUEST_URI} ^(.*/)?[^/]*$
+RewriteRule ^core/v3.1.1/$ %1saref
+RewriteCond %{REQUEST_URI} ^(.*/)?[^/]*$
+RewriteRule ^core/v3.1.1\.([^\./]+)$ %1v3.1.1/saref.$1 [R=302]
+
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.1.1/example/doorswitch(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.1.1/example/energymeter(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.1.1/example/lightswitch(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.1.1/example/multimedia(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.1.1/example/smokesensor(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.1.1/example/temperaturesensor(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.1.1/example/unitsmeasure(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.1.1/example/washingmachine(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*/)?[^/]*$
+RewriteRule ^core/v3.2.1/$ %1saref
+RewriteCond %{REQUEST_URI} ^(.*/)?[^/]*$
+RewriteRule ^core/v3.2.1\.([^\./]+)$ %1v3.2.1/saref.$1 [R=302]
+
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.2.1/example/commodities(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.2.1/example/door_switch(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.2.1/example/functions(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.2.1/example/hvac(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.2.1/example/light_switch(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.2.1/example/on_off_switch(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.2.1/example/open_close_switch(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.2.1/example/properties(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.2.1/example/services(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.2.1/example/smoke_sensor(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.2.1/example/states(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.2.1/example/tasks(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v3.2.1/example/temperature_sensor(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*/)?[^/]*$
+RewriteRule ^core/v4.1.1/$ %1saref
+RewriteCond %{REQUEST_URI} ^(.*/)?[^/]*$
+RewriteRule ^core/v4.1.1\.([^\./]+)$ %1v4.1.1/saref.$1 [R=302]
+
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v4.1.1/example/commodities(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v4.1.1/example/door_switch(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v4.1.1/example/functions(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v4.1.1/example/hvac(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v4.1.1/example/light_switch(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v4.1.1/example/on_off_switch(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v4.1.1/example/open_close_switch(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v4.1.1/example/properties(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v4.1.1/example/services(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v4.1.1/example/smoke_sensor(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v4.1.1/example/states(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v4.1.1/example/tasks(\.[^/]+)?/(.*)$ %1 [R=303]
+
+RewriteCond %{REQUEST_URI} ^(.*)?/[^/]*$
+RewriteRule ^core/v4.1.1/example/temperature_sensor(\.[^/]+)?/(.*)$ %1 [R=303]

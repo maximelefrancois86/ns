@@ -1,0 +1,308 @@
+[
+  {
+    "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#used"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/isSampleOf",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#wasDerivedFrom"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/prov/executionAssociation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Execution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#qualifiedAssociation"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/isResultOf",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#wasGeneratedBy"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Actuation",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Activity"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/prov/hadProcedure",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Procedure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#hadPlan"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+    "http://www.w3.org/2002/07/owl#propertyChainAxiom": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/ns/sosa/prov/executionAssociation"
+          },
+          {
+            "@id": "http://www.w3.org/ns/sosa/prov/hadProcedure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/startTime",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#startedAtTime"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Observation",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Activity"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Sampling",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Activity"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Platform",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Entity"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Deployment",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Activity"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/endTime",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#endedAtTime"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Property",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Entity"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/hasResult",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#generated"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Sample",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Entity"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Execution",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Activity"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/madeBySystem",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#wasAssociatedWith"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Entity"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/prov",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2016-12-14"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@id": "_:n811922676b384a79ab58fbb9a6a05718b7"
+      },
+      {
+        "@value": "Simon J D Cox"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "http://www.opengeospatial.org/ogc/Software"
+      },
+      {
+        "@id": "http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-02-22"
+      }
+    ],
+    "http://purl.org/dc/terms/rights": [
+      {
+        "@value": "Copyright 2017, 2026 W3C/OGC."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Alignment of the the W3C/OGC SOSA Ontology with the W3C PROV-O Ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Alignment of SOSA with PROV-O"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://www.w3.org/ns/prov-o#"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/"
+      }
+    ]
+  },
+  {
+    "@id": "_:n811922676b384a79ab58fbb9a6a05718b7",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Agent"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "en",
+        "@value": "W3C/OGC Spatial Data on the Web Working Group"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/System",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n811922676b384a79ab58fbb9a6a05718b4"
+      }
+    ]
+  },
+  {
+    "@id": "_:n811922676b384a79ab58fbb9a6a05718b4",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/ns/prov#Agent"
+          },
+          {
+            "@id": "http://www.w3.org/ns/prov#Entity"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Procedure",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Plan"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Asset",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n811922676b384a79ab58fbb9a6a05718b1"
+      }
+    ]
+  },
+  {
+    "@id": "_:n811922676b384a79ab58fbb9a6a05718b1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/ns/prov#Agent"
+          },
+          {
+            "@id": "http://www.w3.org/ns/prov#Entity"
+          }
+        ]
+      }
+    ]
+  }
+]

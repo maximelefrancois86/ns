@@ -1,0 +1,27 @@
+meta {
+  name: Test 37 (expects 200)
+  type: http
+  seq: 38
+}
+
+get {
+  url: {{baseUrl}}/
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: application/rdf+xml
+}
+
+assert {
+  res.status: eq 200
+  res.headers.content-type: eq "application/rdf+xml; qs=0.9"
+}
+
+settings {
+  encodeUrl: false
+  followRedirects: false
+  maxRedirects: 5
+  timeout: inherit
+}

@@ -1,0 +1,27 @@
+meta {
+  name: Test 3 (expects 303)
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/ssn.html
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: text/html,*/*;q=0.8
+}
+
+assert {
+  res.status: eq 303
+  res.headers.location: eq "https://www.w3.org/TR/vocab-ssn/"
+}
+
+settings {
+  encodeUrl: false
+  followRedirects: false
+  maxRedirects: 5
+  timeout: inherit
+}

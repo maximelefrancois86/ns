@@ -1,0 +1,175 @@
+# integrated
+
+This directory is the home of the primary artefacts relating to SSN and SOSA. 
+
+A revision of SSN/SOSA to harmonize with ISO 19156:2023 Observations, Measurements and Samples is underway through the W3C Spatial Data on the Web Working Group, and the OGC. 
+
+The need to revisit SOSA/SSN was canvassed at meetings of the Geosemantics/SDWWG and O&M SWG at the OGC member meeting in Frascati Feb 2023. 
+
+The following approach was agreed 
+- SOSA/SSN should be updated to align with OMS, the revision of ISO 19156 issued in 2023
+- alignment with the OGC Connected Systems API, and Sensor Things API should also be pursued
+- updates to SOSA/SSN must maintain backward compatibility for implementations using the 2017 ontology
+ 
+## Background and history
+
+The W3C [Recommendation for Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn/) was published in 2017. 
+It included an RDF implementation of the [OGC/ISO Observations and Measurements standard (2011)](https://www.ogc.org/standard/om/) together with additional elements related to Sampling and Actuation. 
+
+A W3C Working Draft for some [Extensions to the Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn-ext/) was issued in 2020. 
+
+An update of the OGC/ISO Standard was issued in 2023. Now renamed to [Observations, Measurements and Samples](http://www.opengis.net/doc/as/om/3.0) (OMS), it incorporated ideas from SSN and SSN-Ext and introduced some additional concepts proposed by members of the OGC/ISO community. 
+
+@alexrobin proposed a set of revisions to the core ontology documents as described in https://github.com/sensiasoft/w3c_sdw/blob/oms-alignment/ssn/integrated/readme.md - see below. 
+
+See also #88 #48 
+
+# SOSA/SSN - OMS Alignment
+
+Notes about the integration of new OMS v3 concepts into the SOSA/SSN ontology (2023).
+
+
+## Design choices:
+
+ - No change to URIs of existing SOSA/SSN classes and properties.
+ - Only allow minor documentation changes or clarifications that don't fundamentally change the meaning of existing concepts.
+ - Keep most notes and examples from OMS
+ - Some changes to relations to better integrate new OMS classes (range or domain)
+ - Rename associations with more specific names since unique URIs are neeeded in RDF
+
+
+## Summary of the changes:
+
+### New concepts introduced from SSN extensions
+
+#### Classes:
+ - ObservationCollection
+
+#### Associations:
+ - hasOriginalSample
+ - hasSampledFeature
+ - hasUltimateFeatureOfInterest
+
+
+### New concepts introduced from OMS
+
+#### Classes:
+ - ObservingProcedure
+ - SamplingProcedure
+ - PreparationProcedure
+ - Observer
+ - Host
+ - SpatialSample
+ - MaterialSample
+ - StatisticalSample
+ - SampleCollection
+
+#### Associations:
+ - ObservingProcedure subclassOf Procedure
+ - SamplingProcedure subclassOf Procedure
+ - PreparationProcedure subclassOf Procedure
+ - Sensor subclassOf Observer
+ - Platform subclassOf Host
+ - SpatialSample subclassOf Sample
+ - MaterialSample subclassOf Sample
+ - StatisticalSample subclassOf Sample 
+ - Observation usedProcedure ObservingProcedure
+ - Observation madeByObserver (but kept madeBySensor)
+ - Observation madeOnHost 
+ - Observer implements ObservingProcedure
+ - Sampling usedProcedure SamplingProcedure
+ - Sampling preparedSample
+ - Sampler implements SamplingProcedure
+
+
+### New concepts introduced for consistency
+
+#### Classes:
+ - ActuatingProcedure
+
+#### Associations:
+ - Actuation usedProcedure ActuatingProcedure
+ - Actuator implements ActuatingProcedure
+
+
+
+
+# oldSSN/newSSN/SOSA/alignments Integration
+
+This folder contains a proposal for the various documents that need to be exposed by the W3C server:
+ - the document where the old SSN namespace will redirect;
+ - the document that contains only the sosa ontology;
+ - the document that contains the ssn ontology: it imports sosa, adds additional axioms, and defines more terms;
+ - a document for each alignment;
+
+## Requirements
+
+- be as close as possible with the proposals 5 and 6 made by KJanowicz and Kerry at https://www.w3.org/2015/spatial/wiki/Proposals_for_rewriting_SSN
+- be conformant with the linked vocabulary best practices at http://lov.okfn.org/Recommendations_Vocabulary_Design.pdf
+- be OWL DL ontologies;
+- adopt the implementation option for different namespaces for SOSA/SSN (this can be reverted to use a single namespace)
+- implement the mapping table at https://www.w3.org/2015/spatial/wiki/Mapping_Table
+- implement the advices from Phil A and agreed by Scott Simmons at https://www.w3.org/2015/spatial/wiki/Proposals_for_rewriting_SSN
+
+## Checks to do before merging pull requests:
+
+- check the documents implement no more than the changes that are announced in the pull request;
+- check that every modification is associated with a ACTION in the tracker, that refers to something that has been discussed in the Wiki and voted in the conf call;
+- check that the requirements are met;
+- check that the ontologies are valid OWL DL ontologies;
+- check there is no mention of TODO in the documents.
+
+## Proposed methodology
+
+### Initialization
+
+1. copy the old SSN document without the DUL alignments, name it `oldssn.ttl`
+2. create the stub of the documents: `ssnx.ttl`, `sosa.ttl`, `ssn.ttl`;
+3. propose an order for the old SSN terms and group them in sections of no more than 8-10 terms in https://www.w3.org/2015/spatial/wiki/Terms;
+
+For ssnx, sosa, ssn:
+
+1. copy the prefix declarations, ontology declaration and its metadata
+2. discuss metadata in the wiki:
+  1. tite
+  2. description
+  3. creator
+  4. rights
+  5. license
+  6. source or owl:versionInfo ?
+  8. other comment ? 
+3. vote
+4. implemente the agreed option in github.
+
+### Steps
+
+1. someone in charge creates a new branch `b` and picks the next few terms in `oldssn.ttl`
+2. cut/paste their declaration to `ssnx.ttl`
+  1. copy the declarations from the old SSNX ontology;
+  2. order, correct, update the term metadata:
+    1. first the rdfs:label, add @en
+    2. then the rdfs:comment, add @en and replace with skos:definition
+    3. then dcterms:source and the rdfs:seeAlso, if present;
+    4. then owl:deprecated true;
+    5. then a **proposal** for the alignemnt with a term in sosa or ssn, add the mention `# TODO: check` at the end of the line
+    6. then, add rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn>;
+    7. leave all of the axioms, (they will be copied in ssn.ttl).
+  3. when a similar term exists in sosa,
+     1. work on the declaration in `sosa.ttl`
+       1. reuse what already exists in sosa whenever possible
+       2. check the metadata, delete the duplicate rdfs:comment, keep the skos:definition
+       3. add `# TODO: discuss` at the end of lines whenever choices need to be done
+     2. work on the declaration in `ssn.ttl`
+       1. duplicate the axioms when possible;
+       2. if not, make a choice and add `# TODO: discuss` at the end of the line
+  4. when the term belongs to ssn,
+     1. work on the declaration in `ssn.ttl`
+       1. basically copy the declaration and its metadata;
+       2. duplicate the axioms when possible;
+       3. else, make a choice and add `# TODO: discuss` at the end of the line
+3. issue a pull request for branch `b` into `gh-pages`;
+3. for each  `# TODO: discuss`, write and discuss the pros and cons of different options in a wiki page
+4. report this on the mailing list, and in the ISSUE/ACTION tracker,
+5. vote during a conf call,
+6. every decision is implemented in a separate branch  `c` and issue pull requests from `c` into `b`.
+7. when `b` is ready, `merge `b` into `gh-pages`.  

@@ -1,0 +1,1304 @@
+[
+  {
+    "@id": "http://www.w3.org/ns/sosa/implements",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sampling/samplingProcedure-sem"
+      },
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observer/observingProcedure-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-core/AbstractObservationCharacteristics/uFoI-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/inDeployment",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Host/deployment-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Sample",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sample"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/sam/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/hasResult",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/result-sem"
+      },
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sampling/sample-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sampling/samplingProcedure-sem"
+      },
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/observingProcedure-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/ObservingProcedure",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/ObservingProcedure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/obs/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "[ISO 19156:2023] An ObservingProcedure shall be defined as the description of steps performed in order to determine the value of an observableProperty by an Observer."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@language": "en",
+        "@value": "[ISO 19156:2023] An instance of Procedure is a description of the process used by an observer. This could be a chemical analysis method, a protocol for measuring an object, or even a checklist used by a human observer during a biodiversity campaign. Procedure could further describe the algorithms behind simulators or models used to generate a result from other inputs."
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/deployedOnPlatform",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Deployment/host-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Platform",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Host"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/oms/",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2023-10-07"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@id": "_:n7648c6b7dac3420c90a678ab78d4c345b1"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "This ontology is based on the SOSA Ontology by the W3C/OGC Spatial Data on the Web Working Group, supplemented by some classes and properties required to implement ISO 19156:2023 ."
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "http://www.opengeospatial.org/ogc/Software"
+      },
+      {
+        "@id": "http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"
+      }
+    ],
+    "http://purl.org/dc/terms/rights": [
+      {
+        "@value": "Copyright 2025 W3C/OGC."
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://docs.ogc.org/as/20-082r4/20-082r4.html"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "OMS Ontology - based on (SOSA) Ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The original source of each resource is indicated by the rdfs:isDefinedBy property"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/obs/"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/sam/"
+      }
+    ]
+  },
+  {
+    "@id": "_:n7648c6b7dac3420c90a678ab78d4c345b1",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Agent"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "en",
+        "@value": "W3C/OGC Spatial Data on the Web Working Group"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Sampler",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sampler"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/sam/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/hasMember",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-basic/ObservationCollection/member-sem"
+      },
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-basic/SampleCollection/member-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/oms/madeOnPlatform",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/ObservationCollection"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Platform"
+      }
+    ],
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/host-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "made on platform"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/makesObservationCollection"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "relation from an ObservationCollection to the associated Platform."
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/StatisticalSample",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-basic/StatisticalSample"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/sam/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/resultTime",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/resultTime-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/isSampleOf",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sample/sampledFeature-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/sam/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/wasObservedBy",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/gen/relatedObservation-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/obs/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/oms/PreparationProcedure",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/PreparationProcedure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Preparation Procedure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Procedure"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "[ISO 19156:2023] A PreparationProcedure shall be defined as the description of preparation steps performed on a Sample"
+      },
+      {
+        "@language": "en",
+        "@value": "\n  A workflow, protocol, plan, algorithm, or computational method specifying a step in preparing a Sample. \n  A Preparation Procedure is re-usable, and might be involved in many preparations. \n  It explains the steps to be carried out to arrive at reproducible results.\n  "
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Sensor",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observer"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/obs/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/SamplingProcedure",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/SamplingProcedure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/sam/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "[ISO 19156:2023] A SamplingProcedure shall be defined as the description of steps performed by a Sampler in order to extract a Sample from its sampledFeature in the frame of a Sampling."
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/isPropertyOf",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/oms/makesObservationCollection",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Platform"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/ObservationCollection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "makes observation collection"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/madeOnPlatform"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "relation from a Platform to an ObservationCollection arising from it."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "\n  In order to indicate potential Observations at a Platform, an empty ObservationCollection can be provided. This mimics the semantics of the OMS ObservingCapability class.\n  "
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/oms/metadata",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Deployment"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sampler"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sampling"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/Actuator"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/Platform"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sensor"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/PreparationStep"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/ObservationCollection"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/SampleCollection"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/ActuatingProcedure"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/Observation"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/Property"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/Procedure"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sample"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/SamplingProcedure"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/ObservingProcedure"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/PreparationProcedure"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/SamplingCollection"
+      }
+    ],
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-core/gen/metadata-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/deployedSystem",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Deployment/observer-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/oms/hasPreparationStep",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sample"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/PreparationStep"
+      }
+    ],
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sample/preparationStep-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has preparation step"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/preparedSample"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Link to a preparation step used to prepare the sample"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/isResultOf",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/gen/relatedObservation-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/oms/observationType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Observation"
+      }
+    ],
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-core/AbstractObservationCharacteristics/type-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "observation type"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Information providing further detail on the type of Observations."
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/MaterialSample",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-basic/MaterialSample"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/sam/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/oms/processingDetails",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/PreparationStep"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/PreparationProcedure"
+      }
+    ],
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/PreparationStep/processingDetails-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "processing details"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/samplePreparationStep"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The PreparationProcedure used by the PreparationStep."
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/observedProperty",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/observedProperty-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/obs/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/hasProperty",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-core/AbstractObservationCharacteristics/pFoI-sem"
+      },
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/featureOfInterest-sem"
+      },
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sampling/featureOfInterest-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Property",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/ObservableProperty"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/oms/relatedSampling",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sampling"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sampling"
+      }
+    ],
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sampling/relatedSampling-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "related sampling"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation to an act of Sampling."
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/gen/relatedObservation-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Sampling",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sampling"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/sam/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Procedure",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Procedure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.opengis.net/def/ont/modspec/implementedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://www.opengis.net/def/ont/modspec/implements"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "link from a requirement linked to an element in a UML model to an RDFS/OWL class or property which implements it"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/madeObservation",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/gen/relatedObservation-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/obs/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/resultQuality",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-core/AbstractObservationCharacteristics/resultQuality-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/obs/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.opengis.net/def/ont/modspec/implements",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/dc/terms/source"
+      },
+      {
+        "@id": "https://www.w3.org/TR/prov-o/#wasDerivedFrom"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "link from an RDFS/OWL class or property to a requirement linked to an element in a UML model which it implements"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/madeSampling",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sampler/sampling-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/sam/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/implementedBy",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/SamplingProcedure/sampler-sem"
+      },
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/PreparationStep/processingDetails-sem"
+      },
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/ObservingProcedure/observer-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/implements"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/hasSample",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/sam/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/oms/samplePreparationStep",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/PreparationProcedure"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/PreparationStep"
+      }
+    ],
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/PreparationProcedure/samplePreparationStep-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "sample preparation step"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/processingDetails"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A PreparationStep that uses the PreparationProcedure."
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/oms/PreparationStep",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/PreparationStep"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Preparation Step"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A PreparationStep is an individual step pertaining to a Sample PreparationProcedure."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@language": "en",
+        "@value": "???"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/SpatialSample",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-basic/SpatialSample"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/sam/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/hasOriginalSample",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/sam/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/relatedObservation",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/gen/relatedObservation-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/obs/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/observer-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/obs/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/SampleCollection",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-basic/SampleCollection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/sam/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/ObservationCollection",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-basic/ObservationCollection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/obs/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/hasSimpleResult",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/result-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/observes",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observer/observableProperty-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/obs/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/oms/validTime",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/SamplingCollection"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sampling"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/ObservationCollection"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/Observation"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://www.w3.org/2006/time#Interval"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/PeriodOfTime"
+      }
+    ],
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/validTime-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "valid time"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The time interval during which the result is assumed to be applicable for use."
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/usedForExecution",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/gen/relatedObservation-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/phenomenonTime",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/phenomenonTime-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Observation",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/obs/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/madeBySampler",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sampling/sampler-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/sam/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Deployment",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Deployment"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/isObservedBy",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/ObservableProperty/observer-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/obs/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/hasDeployment",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observer/deployment-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/common/"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/oms/preparedSample",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/PreparationStep"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sample"
+      }
+    ],
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/PreparationStep/preparedSample-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "prepared sample"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/oms/hasPreparationStep"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The Sample on which the PreparationProcedure is performed."
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/isSampleOfUltimateFOI",
+    "http://www.opengis.net/def/ont/modspec/implements": [
+      {
+        "@id": "http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sample/sampledFeature-sem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/sam/"
+      }
+    ]
+  }
+]

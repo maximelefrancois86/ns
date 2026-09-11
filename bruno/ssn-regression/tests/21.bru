@@ -1,0 +1,27 @@
+meta {
+  name: Test 21 (expects 303)
+  type: http
+  seq: 22
+}
+
+get {
+  url: {{baseUrl}}/x?y
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: text/html
+}
+
+assert {
+  res.status: eq 303
+  res.headers.location: eq "https://www.w3.org/TR/vocab-ssn/#SSNx"
+}
+
+settings {
+  encodeUrl: false
+  followRedirects: false
+  maxRedirects: 5
+  timeout: inherit
+}

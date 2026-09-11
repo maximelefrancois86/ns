@@ -1,0 +1,56 @@
+<http://www.w3.org/ns/sosa/Platform> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<http://www.w3.org/ns/sosa/endTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#endedAtTime> .
+<http://www.w3.org/ns/sosa/prov> <http://purl.org/dc/terms/creator> _:nc7733a5b549542d6a05df382711c34bab7 .
+_:nc7733a5b549542d6a05df382711c34bab7 <http://xmlns.com/foaf/0.1/name> "W3C/OGC Spatial Data on the Web Working Group"@en .
+<http://www.w3.org/ns/sosa/prov> <http://www.w3.org/2000/01/rdf-schema#label> "Alignment of SOSA with PROV-O"@en .
+<http://www.w3.org/ns/sosa/prov> <http://purl.org/dc/terms/license> <http://www.opengeospatial.org/ogc/Software> .
+<http://www.w3.org/ns/sosa/Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+_:nc7733a5b549542d6a05df382711c34bab8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/prov/executionAssociation> .
+<http://www.w3.org/ns/sosa/prov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3.org/ns/sosa/madeBySystem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAssociatedWith> .
+_:nc7733a5b549542d6a05df382711c34bab6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/prov#Entity> .
+_:nc7733a5b549542d6a05df382711c34bab5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/prov#Agent> .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Plan> .
+_:nc7733a5b549542d6a05df382711c34bab9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/prov/hadProcedure> .
+<http://www.w3.org/ns/sosa/prov> <http://purl.org/dc/terms/modified> "2026-02-22"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:nc7733a5b549542d6a05df382711c34bab3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/prov#Entity> .
+_:nc7733a5b549542d6a05df382711c34bab6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:nc7733a5b549542d6a05df382711c34bab2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/prov#Agent> .
+_:nc7733a5b549542d6a05df382711c34bab4 <http://www.w3.org/2002/07/owl#unionOf> _:nc7733a5b549542d6a05df382711c34bab5 .
+<http://www.w3.org/ns/sosa/prov/executionAssociation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#qualifiedAssociation> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:nc7733a5b549542d6a05df382711c34bab8 .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#used> .
+<http://www.w3.org/ns/sosa/prov> <http://www.w3.org/2000/01/rdf-schema#comment> "Alignment of the the W3C/OGC SOSA Ontology with the W3C PROV-O Ontology"@en .
+<http://www.w3.org/ns/sosa/prov/hadProcedure> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#hadPlan> .
+_:nc7733a5b549542d6a05df382711c34bab1 <http://www.w3.org/2002/07/owl#unionOf> _:nc7733a5b549542d6a05df382711c34bab2 .
+_:nc7733a5b549542d6a05df382711c34bab8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nc7733a5b549542d6a05df382711c34bab9 .
+<http://www.w3.org/ns/sosa/prov/executionAssociation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/Asset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nc7733a5b549542d6a05df382711c34bab1 .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<http://www.w3.org/ns/sosa/prov> <http://purl.org/dc/terms/creator> "Simon J D Cox" .
+<http://www.w3.org/ns/sosa/Execution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<http://www.w3.org/ns/sosa/prov> <http://purl.org/dc/terms/license> <http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document> .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<http://www.w3.org/ns/sosa/prov> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/prov-o#> .
+<http://www.w3.org/ns/sosa/prov/executionAssociation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Execution> .
+<http://www.w3.org/ns/sosa/prov/hadProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/isSampleOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasDerivedFrom> .
+<http://www.w3.org/ns/sosa/prov> <http://purl.org/dc/terms/rights> "Copyright 2017, 2026 W3C/OGC." .
+_:nc7733a5b549542d6a05df382711c34bab5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nc7733a5b549542d6a05df382711c34bab6 .
+<http://www.w3.org/ns/sosa/prov> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/sosa/> .
+_:nc7733a5b549542d6a05df382711c34bab2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nc7733a5b549542d6a05df382711c34bab3 .
+_:nc7733a5b549542d6a05df382711c34bab4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Deployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+_:nc7733a5b549542d6a05df382711c34bab1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/prov/hadProcedure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Procedure> .
+_:nc7733a5b549542d6a05df382711c34bab9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.w3.org/ns/sosa/isResultOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasGeneratedBy> .
+<http://www.w3.org/ns/sosa/startTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#startedAtTime> .
+<http://www.w3.org/ns/sosa/prov> <http://purl.org/dc/terms/created> "2016-12-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#generated> .
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+_:nc7733a5b549542d6a05df382711c34bab7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://www.w3.org/ns/sosa/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nc7733a5b549542d6a05df382711c34bab4 .
+_:nc7733a5b549542d6a05df382711c34bab3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .

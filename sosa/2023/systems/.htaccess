@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule  ^$  sosa-system.ttl [L]
+RewriteRule  ^sosa-system/?$  sosa-system.ttl [L]

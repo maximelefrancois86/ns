@@ -1,0 +1,70 @@
+<http://www.w3.org/ns/sosa/systems/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasOperatingConditions> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/OperatingConditions> .
+<http://www.w3.org/ns/sosa/Battery> <http://www.w3.org/2004/02/skos/core#definition> "A Battery powering a System as its primary or secondary power source. As this is a specialization of the System class modeling of integrated battery management systems is also possible."@en .
+<http://www.w3.org/ns/sosa/hasOperatingConditions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/hasSystemCapability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/systems/> .
+<http://www.w3.org/ns/sosa/hasValidityContext> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/ObservationCollection> .
+<http://www.w3.org/ns/sosa/systems/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology> .
+<http://www.w3.org/ns/sosa/NormalOperatingConditions> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/systems/> .
+<http://www.w3.org/ns/sosa/hasSystemCapability> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/ObservationCollection> .
+<http://www.w3.org/ns/sosa/Battery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/System> .
+<http://www.w3.org/ns/sosa/systems/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+<http://www.w3.org/ns/sosa/hasSystemCapability> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuator> .
+<http://www.w3.org/ns/sosa/hasSystemCapability> <http://www.w3.org/2000/01/rdf-schema#label> "has system capability"@en .
+<http://www.w3.org/ns/sosa/systems/> <http://purl.org/dc/terms/created> "2017-05-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.w3.org/ns/sosa/SuboptimalOperatingConditions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/hasValidityContext> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/hasValidityContext> <http://www.w3.org/2000/01/rdf-schema#label> "has validity context"@en .
+<http://www.w3.org/ns/sosa/SurvivableConditions> <http://www.w3.org/2000/01/rdf-schema#label> "Survivable Conditions"@en .
+<http://www.w3.org/ns/sosa/SurvivableConditions> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/systems/> .
+<http://www.w3.org/ns/sosa/hasSystemCapability> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sampler> .
+<http://www.w3.org/ns/sosa/systems/> <http://purl.org/dc/terms/title> "Ontology of operating conditions and capabilities of systems"@en .
+<http://www.w3.org/ns/sosa/hasSystemCapability> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/OperatingConditions> <http://www.w3.org/2000/01/rdf-schema#label> "Operating Conditions"@en .
+<http://www.w3.org/ns/sosa/SuboptimalOperatingConditions> <http://www.w3.org/2004/02/skos/core#definition> "\n Type of observation or observation collection that describe the conditions under which a system is expected to operate sub-optimally.\n Results will still be reported but the performance of the sensor, in term of precision for example, will be impaired.\n  "@en .
+<http://www.w3.org/ns/sosa/SuboptimalOperatingConditions> <http://www.w3.org/2000/01/rdf-schema#label> "Suboptimal Conditions"@en .
+<http://www.w3.org/ns/sosa/hasSystemCapability> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/System> .
+<http://www.w3.org/ns/sosa/systems/> <http://purl.org/dc/terms/rights> "Copyright 2025 W3C/OGC." .
+<http://www.w3.org/ns/sosa/SuboptimalOperatingConditions> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/systems/> .
+<http://www.w3.org/ns/sosa/hasValidityContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/systems/> .
+<http://www.w3.org/ns/sosa/NormalOperatingConditions> <http://www.w3.org/2000/01/rdf-schema#label> "Normal Operating Conditions"@en .
+<http://www.w3.org/ns/sosa/OperatingConditions> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/systems/> .
+<http://www.w3.org/ns/sosa/hasOperatingConditions> <http://www.w3.org/2004/02/skos/core#definition> "\n  Relation between a System and its Operating Conditions, modelled as ObservationCollection (or Observation) describing\n  conditions under which the System can operate. A short but extensible list of sub-classes of OperatingConditions is\n  provided in SSN-System, such as normal operating conditions, suboptimal conditions, and survivable conditions.\n  "@en .
+<http://www.w3.org/ns/sosa/systems/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "sosa" .
+<http://www.w3.org/ns/sosa/Battery> <http://www.w3.org/2000/01/rdf-schema#label> "Battery"@en .
+<http://www.w3.org/ns/sosa/hasOperatingConditions> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/ObservationCollection> .
+<http://www.w3.org/ns/sosa/NormalOperatingConditions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/systems/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.w3.org/ns/sosa/" .
+<http://www.w3.org/ns/sosa/hasValidityContext> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/ObservationCollection> .
+<http://www.w3.org/ns/sosa/hasOperatingConditions> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuator> .
+<http://www.w3.org/ns/sosa/Battery> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/systems/> .
+<http://www.w3.org/ns/sosa/systems/> <http://www.w3.org/2000/01/rdf-schema#comment> "Please report any errors to the W3C Spatio-temporal Data on the Web Working Group via the SDW WG Public List public-sdw-wg@w3.org"@en .
+<http://www.w3.org/ns/sosa/NormalOperatingConditions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/OperatingConditions> .
+<http://www.w3.org/ns/sosa/SurvivableConditions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/hasOperatingConditions> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sampler> .
+<http://www.w3.org/ns/sosa/hasOperatingConditions> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/NormalOperatingConditions> <http://www.w3.org/2004/02/skos/core#definition> "\n  Type of observation or observation collection that describe the conditions under which a system is expected to operate normally.\n  "@en .
+<http://www.w3.org/ns/sosa/hasValidityContext> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/hasOperatingConditions> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/System> .
+<http://www.w3.org/ns/sosa/hasValidityContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/hasOperatingConditions> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sensor> .
+<http://www.w3.org/ns/sosa/hasValidityContext> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Property> .
+<http://www.w3.org/ns/sosa/SurvivableConditions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/OperatingConditions> .
+<http://www.w3.org/ns/sosa/systems/> <http://purl.org/dc/terms/license> <http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document> .
+<http://www.w3.org/ns/sosa/hasOperatingConditions> <http://www.w3.org/2000/01/rdf-schema#label> "has operating conditions"@en .
+<http://www.w3.org/ns/sosa/systems/> <http://purl.org/dc/terms/license> <http://www.opengeospatial.org/ogc/Software> .
+_:n14ebee0e8fd0426c9e58cb26ab513bccb1 <http://xmlns.com/foaf/0.1/name> "W3C/OGC Spatio-temporal Data on the Web Working Group"@en .
+<http://www.w3.org/ns/sosa/hasSystemCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/systems/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3.org/ns/sosa/systems/> <http://purl.org/dc/terms/description> "The System Capabilities Module imports SOSA and adds classes and properties required for the description of the operating conditions and capabilities of systems, particularly Sensors and Actuators."@en .
+<http://www.w3.org/ns/sosa/OperatingConditions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/hasSystemCapability> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sensor> .
+<http://www.w3.org/ns/sosa/SuboptimalOperatingConditions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/OperatingConditions> .
+_:n14ebee0e8fd0426c9e58cb26ab513bccb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://www.w3.org/ns/sosa/systems/> <http://purl.org/dc/terms/modified> "2025-06-24"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.w3.org/ns/sosa/hasOperatingConditions> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/systems/> .
+<http://www.w3.org/ns/sosa/OperatingConditions> <http://www.w3.org/2004/02/skos/core#definition> "\n  Type of observation or observation collection that describe operating conditions of systems.\n  Sub-classes of this class explicit the desirability of the conditions.\n  Three such sub-classes are provided as a basic classification:\n  NormalOperatingConditions, SuboptimalOperatingConditions, and SurvivableConditions.\n  "@en .
+<http://www.w3.org/ns/sosa/systems/> <http://purl.org/dc/terms/creator> _:n14ebee0e8fd0426c9e58cb26ab513bccb1 .
+<http://www.w3.org/ns/sosa/hasSystemCapability> <http://www.w3.org/2004/02/skos/core#definition> "Relation between a System and an ObservationCollection (or Observation) describing the capability of the system. A sensor or system may have more than one set of system capabilities with different validity contexts."@en .
+<http://www.w3.org/ns/sosa/hasValidityContext> <http://www.w3.org/2004/02/skos/core#definition> "Links a an observation collection or observation (typically about the system capabilities) or a property (typically about the system capabilities) to its validity context, described as an observation collection or observation (typically about the system environment)."@en .
+<http://www.w3.org/ns/sosa/SurvivableConditions> <http://www.w3.org/2004/02/skos/core#definition> "\n  Type of observation or observation collection that describe the conditions under which a system is expected to survive, that is to continue to exist in its current form,\n  even if its future operations are impaired. A typical example is the temperature at which a sensor looses physical integrity and looses its shape.\n  A system or sensor exposed to conditions outside of those reported by SurvivableConditions will no longer be serviceable.\n  "@en .

@@ -1,0 +1,27 @@
+meta {
+  name: Test 4 (expects 200)
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/ssn.ttl
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: text/html,*/*;q=0.8
+}
+
+assert {
+  res.status: eq 200
+  res.headers.content-type: eq "text/turtle; charset=utf-8"
+}
+
+settings {
+  encodeUrl: false
+  followRedirects: false
+  maxRedirects: 5
+  timeout: inherit
+}

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/system-environment-properties#MaxAmbientTemperature">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:label xml:lang="en">maximum ambient temperature</rdfs:label>
+    <skos:definition xml:lang="en">The maximum ambient temperature in the environment in which the system is expected to operate.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/system-environment-properties#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/system-environment-properties#WindDirection">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:label xml:lang="en">wind direction</rdfs:label>
+    <skos:definition xml:lang="en">The direction from which the wind is blowing in the system's environment.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/system-environment-properties#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/system-environment-properties#">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <dcterms:title xml:lang="en">Sample vocabulary of properties about the system environment</dcterms:title>
+    <dcterms:description xml:lang="en">This vocabulary defines a short list of properties about the system environment. 
+
+  It is only for illustration purposes, as the Spatio-temporal Data on the Web Working Group does not ambition to maintain a living list of properties. Extensions of this list should be led by other organization, and publications done to relevant vocabulary portals.</dcterms:description>
+    <dcterms:creator rdf:nodeID="n273df8a425b64c06b70d17469d1bd919b1"/>
+    <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
+    <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+    <rdfs:comment xml:lang="en">Please report any errors to the W3C Spatio-temporal Data on the Web Working Group via the SDW WG Public List public-sdw-wg@w3.org</rdfs:comment>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-05</dcterms:modified>
+    <vann:preferredNamespacePrefix>sosa-env</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>http://www.w3.org/ns/sosa/system-environment-properties#</vann:preferredNamespaceUri>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/systems/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/system-environment-properties#UVExposure">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:label xml:lang="en">UV exposure</rdfs:label>
+    <skos:definition xml:lang="en">The level of ultraviolet radiation in the system's environment.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/system-environment-properties#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/system-environment-properties#AmbientTemperature">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:label xml:lang="en">ambient temperature</rdfs:label>
+    <skos:definition xml:lang="en">The temperature of the environment of the system.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/system-environment-properties#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/system-environment-properties#Altitude">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:label xml:lang="en">altitude</rdfs:label>
+    <skos:definition xml:lang="en">The vertical distance of the system above mean sea level.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/system-environment-properties#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/system-environment-properties#AmbientLightLevel">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:label xml:lang="en">ambient light level</rdfs:label>
+    <skos:definition xml:lang="en">The level of illumination in the environment surrounding the system.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/system-environment-properties#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/system-environment-properties#AmbientPressure">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:label xml:lang="en">ambient pressure</rdfs:label>
+    <skos:definition xml:lang="en">The atmospheric pressure in the environment surrounding the system.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/system-environment-properties#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/system-environment-properties#AmbientHumidity">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:label xml:lang="en">ambient humidity</rdfs:label>
+    <skos:definition xml:lang="en">The humidity of the environment of the system.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/system-environment-properties#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/system-environment-properties#DeploymentLocation">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:label xml:lang="en">deployment location</rdfs:label>
+    <skos:definition xml:lang="en">The spatial location at which the system is deployed.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/system-environment-properties#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/system-environment-properties#MagneticInterferenceLevel">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:label xml:lang="en">magnetic interference level</rdfs:label>
+    <skos:definition xml:lang="en">The level of magnetic interference present in the system's environment.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/system-environment-properties#"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n273df8a425b64c06b70d17469d1bd919b1">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <foaf:name xml:lang="en">W3C/OGC Spatio-temporal Data on the Web Working Group</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/system-environment-properties#MaxAmbientRelativeHumidity">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:label xml:lang="en">maximum ambient humidity</rdfs:label>
+    <skos:definition xml:lang="en">The maximum ambient humidity in the environment in which the system is expected to operate.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/system-environment-properties#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/system-environment-properties#PollutionLevel">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:label xml:lang="en">pollution level</rdfs:label>
+    <skos:definition xml:lang="en">The level of pollutants (e.g., particulate matter, NO₂, CO) in the air around the system.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/system-environment-properties#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/system-environment-properties#ExposureToVibration">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:label xml:lang="en">exposure to vibration</rdfs:label>
+    <skos:definition xml:lang="en">Indicates whether and to what extent the system is subject to vibration in its environment.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/system-environment-properties#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/system-environment-properties#MinAmbientTemperature">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:label xml:lang="en">minimum ambient temperature</rdfs:label>
+    <skos:definition xml:lang="en">The minimum ambient temperature in the environment in which the system is expected to operate.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/system-environment-properties#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/system-environment-properties#WindSpeed">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:label xml:lang="en">wind speed</rdfs:label>
+    <skos:definition xml:lang="en">The speed of wind in the system's surrounding environment.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/system-environment-properties#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/system-environment-properties#DeploymentEnvironmentType">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:label xml:lang="en">deployment environment type</rdfs:label>
+    <skos:definition xml:lang="en">The type of environment in which the system is deployed, e.g., indoor, outdoor, marine, underground.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/system-environment-properties#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/system-environment-properties#MinAmbientRelativeHumidity">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:label xml:lang="en">minimum ambient humidity</rdfs:label>
+    <skos:definition xml:lang="en">The minimum ambient humidity in the environment in which the system is expected to operate.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/system-environment-properties#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/system-environment-properties#Salinity">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:label xml:lang="en">salinity</rdfs:label>
+    <skos:definition xml:lang="en">The concentration of salts in the environment surrounding the system, typically used for aquatic or marine deployments.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/system-environment-properties#"/>
+  </rdf:Description>
+</rdf:RDF>

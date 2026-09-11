@@ -1,0 +1,346 @@
+[
+  {
+    "@id": "http://www.w3.org/ns/sosa/dul",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2025-08-06"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Maxime Lefrançois"
+      },
+      {
+        "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b1"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"
+      },
+      {
+        "@id": "http://www.opengeospatial.org/ogc/Software"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2025-08-06"
+      }
+    ],
+    "http://purl.org/dc/terms/rights": [
+      {
+        "@value": "Copyright 2025 W3C/OGC."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Alignment of the the W3C/OGC SOSA Ontology with the DOLCE UltraLite upper ontology (DUL)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Alignment of SOSA with DUL"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/"
+      },
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"
+      }
+    ]
+  },
+  {
+    "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b1",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Agent"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "en",
+        "@value": "W3C/OGC Spatial Data on the Web Working Group"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Platform",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b13"
+      }
+    ]
+  },
+  {
+    "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b13",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"
+          },
+          {
+            "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/System",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b26"
+      }
+    ]
+  },
+  {
+    "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b26",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"
+          },
+          {
+            "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Stimulus",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b23"
+      }
+    ]
+  },
+  {
+    "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b23",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"
+          },
+          {
+            "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Property",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b19"
+      }
+    ]
+  },
+  {
+    "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"
+          },
+          {
+            "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Sample",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Deployment",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b2"
+      }
+    ]
+  },
+  {
+    "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b2",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"
+          },
+          {
+            "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"
+          },
+          {
+            "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/ExecutionCollection",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"
+      },
+      {
+        "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b9"
+      }
+    ]
+  },
+  {
+    "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b10"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b10",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"
+          },
+          {
+            "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/SampleCollection",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b22"
+      },
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"
+      }
+    ]
+  },
+  {
+    "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Procedure",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b16"
+      }
+    ]
+  },
+  {
+    "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b16",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Method"
+          },
+          {
+            "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Execution",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b6"
+      }
+    ]
+  },
+  {
+    "@id": "_:n9ada9b85c4a1457baf818e2f7ec1b565b6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"
+          },
+          {
+            "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"
+          }
+        ]
+      }
+    ]
+  }
+]

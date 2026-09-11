@@ -1,0 +1,13 @@
+RewriteEngine On
+
+<Files ssn.rdf>
+    Header set Content-Disposition "inline; filename=ssn.rdf"
+</Files>
+
+<Files ssn.ttl>
+    Header set Content-Disposition "inline; filename=ssn.ttl"
+</Files>
+
+RewriteRule  ^$  ssn.ttl [L]
+RewriteRule  ^ssn/?$  ssn.ttl [L]
+RewriteRule  ^dul/?$  dul.ttl [L]

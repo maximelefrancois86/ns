@@ -1,0 +1,27 @@
+meta {
+  name: Test 12 (expects 301)
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: text/html
+}
+
+assert {
+  res.status: eq 301
+  res.headers.location: eq "https://www.w3.org/ns/ssn/"
+}
+
+settings {
+  encodeUrl: false
+  followRedirects: false
+  maxRedirects: 5
+  timeout: inherit
+}

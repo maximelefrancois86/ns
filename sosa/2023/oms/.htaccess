@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule  ^$  sosa-oms.ttl [L]
+RewriteRule  ^sosa-oms/?$  sosa-oms.ttl [L]

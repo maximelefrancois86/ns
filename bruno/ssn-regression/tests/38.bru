@@ -1,0 +1,27 @@
+meta {
+  name: Test 38 (expects 200)
+  type: http
+  seq: 39
+}
+
+get {
+  url: {{baseUrl}}/hosts
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: text/turtle
+}
+
+assert {
+  res.status: eq 200
+  res.headers.content-type: eq "text/turtle; charset=utf-8"
+}
+
+settings {
+  encodeUrl: false
+  followRedirects: false
+  maxRedirects: 5
+  timeout: inherit
+}

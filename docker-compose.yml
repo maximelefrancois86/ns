@@ -1,0 +1,25 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: docker/httpd/Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+      LATEST: "2023"
+      BASE: "http://localhost:8080"
+    volumes:
+      - .:/usr/local/apache2/htdocs/ns:ro
+
+  tests:
+    build:
+      context: .
+      dockerfile: docker/test-runner/Dockerfile
+    depends_on:
+      - web
+    environment:
+      TEST_DELAY: "0"
+      LATEST: "2023"
+      BASE: "http://localhost:8080"
+    volumes:
+      - .:/workspace:ro

@@ -1,0 +1,54 @@
+_:n4c2b339c0dbf47d9915b2e2010222173b2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/implementedBy> .
+_:n4c2b339c0dbf47d9915b2e2010222173b5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/preparedSample> .
+_:n4c2b339c0dbf47d9915b2e2010222173b6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/oms/hasPreparationStep> .
+<http://www.w3.org/ns/sosa/oms/PreparationStep> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/oms/> .
+_:n4c2b339c0dbf47d9915b2e2010222173b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/isResultOfMadeBySampler> .
+<http://www.w3.org/ns/ssn/oms/> <http://purl.org/dc/terms/creator> _:n4c2b339c0dbf47d9915b2e2010222173b1 .
+<http://www.w3.org/ns/ssn/oms/> <http://www.w3.org/2000/01/rdf-schema#comment> "Vertical module adding SSN-style axioms to the SOSA-OMS module" .
+<http://www.w3.org/ns/ssn/oms/> <http://purl.org/dc/terms/rights> "Copyright 2025 W3C/OGC." .
+_:n4c2b339c0dbf47d9915b2e2010222173b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n4c2b339c0dbf47d9915b2e2010222173b8 .
+_:n4c2b339c0dbf47d9915b2e2010222173b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.w3.org/ns/sosa/oms/makesObservationCollection> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:n4c2b339c0dbf47d9915b2e2010222173b10 .
+_:n4c2b339c0dbf47d9915b2e2010222173b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n4c2b339c0dbf47d9915b2e2010222173b12 .
+<http://www.w3.org/ns/sosa/oms/PreparationStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n4c2b339c0dbf47d9915b2e2010222173b3 .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/sam/> .
+_:n4c2b339c0dbf47d9915b2e2010222173b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://www.w3.org/ns/ssn/oms/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+_:n4c2b339c0dbf47d9915b2e2010222173b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> .
+<http://www.w3.org/ns/ssn/oms/> <http://purl.org/dc/terms/title> "OMS Ontology - based on (SOSA) Ontology with SSN axiomatization"@en .
+_:n4c2b339c0dbf47d9915b2e2010222173b4 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.w3.org/ns/ssn/oms/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/ssn/obs/> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n4c2b339c0dbf47d9915b2e2010222173b6 .
+_:n4c2b339c0dbf47d9915b2e2010222173b2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/oms/PreparationStep> .
+<http://www.w3.org/ns/ssn/oms/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/sosa/oms/> .
+<http://www.w3.org/ns/sosa/oms/PreparationProcedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n4c2b339c0dbf47d9915b2e2010222173b2 .
+<http://www.w3.org/ns/sosa/oms/PreparationProcedure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/oms/> .
+<http://www.w3.org/ns/ssn/oms/> <http://purl.org/dc/terms/license> <http://www.opengeospatial.org/ogc/Software> .
+_:n4c2b339c0dbf47d9915b2e2010222173b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n4c2b339c0dbf47d9915b2e2010222173b3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/oms/PreparationProcedure> .
+_:n4c2b339c0dbf47d9915b2e2010222173b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/hosts> .
+_:n4c2b339c0dbf47d9915b2e2010222173b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/madeSamplingHasResult> .
+_:n4c2b339c0dbf47d9915b2e2010222173b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/oms/PreparationStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n4c2b339c0dbf47d9915b2e2010222173b5 .
+_:n4c2b339c0dbf47d9915b2e2010222173b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n4c2b339c0dbf47d9915b2e2010222173b3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/usedProcedure> .
+<http://www.w3.org/ns/sosa/oms/madeOnPlatform> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:n4c2b339c0dbf47d9915b2e2010222173b7 .
+<http://www.w3.org/ns/sosa/oms/PreparationStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n4c2b339c0dbf47d9915b2e2010222173b4 .
+_:n4c2b339c0dbf47d9915b2e2010222173b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n4c2b339c0dbf47d9915b2e2010222173b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:n4c2b339c0dbf47d9915b2e2010222173b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n4c2b339c0dbf47d9915b2e2010222173b11 .
+_:n4c2b339c0dbf47d9915b2e2010222173b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/oms/makesObservationCollection> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/oms/> .
+<http://www.w3.org/ns/ssn/oms/> <http://purl.org/dc/terms/created> "2023-12-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:n4c2b339c0dbf47d9915b2e2010222173b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/ssn/oms/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/ssn/sam/> .
+_:n4c2b339c0dbf47d9915b2e2010222173b6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/oms/PreparationStep> .
+<http://www.w3.org/ns/sosa/oms/madeOnPlatform> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/oms/> .
+_:n4c2b339c0dbf47d9915b2e2010222173b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/isHostedBy> .
+<http://www.w3.org/ns/ssn/oms/> <http://purl.org/dc/terms/description> "This ontology is based on the SOSA Ontology by the W3C/OGC Spatial Data on the Web Working Group, supplemented by some classes and properties required to implement ISO 19156:2023 , with axiomatization following SSN."@en .
+<http://www.w3.org/ns/ssn/oms/> <http://purl.org/dc/terms/license> <http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document> .
+<http://www.w3.org/ns/ssn/oms/> <http://purl.org/dc/terms/source> <https://docs.ogc.org/as/20-082r4/20-082r4.html> .
+_:n4c2b339c0dbf47d9915b2e2010222173b1 <http://xmlns.com/foaf/0.1/name> "W3C/OGC Spatial Data on the Web Working Group"@en .
+_:n4c2b339c0dbf47d9915b2e2010222173b5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Sample> .
+_:n4c2b339c0dbf47d9915b2e2010222173b4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/preparedSample> .
+_:n4c2b339c0dbf47d9915b2e2010222173b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n4c2b339c0dbf47d9915b2e2010222173b9 .

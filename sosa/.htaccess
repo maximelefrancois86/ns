@@ -1,11 +1,26 @@
 ######################################################################
-# Rewrite rules for the SOSA ontology, the SOSA to OBOE and the SOSA
-# to O&M alignments.
+# Rewrite rules for the SOSA ontology.
 #
 # Ontologies and rules developed by the Spatial Data on the Web WG.
 ######################################################################
 
 RewriteEngine On
+
+# Shared namespace edition and base URL variables for rewrite rules in subdirectories.
+SetEnv LATEST 2023
+SetEnv BASE   https://www.w3.org/
+
+
+# Latest namespace URL points to the current edition.
+RewriteRule  ^$  %{ENV:BASE}ns/sosa/%{ENV:LATEST}/ [R=302,L]
+
+# Stable 2017 alignment module IRIs.
+RewriteRule  ^om/?$  %{ENV:BASE}ns/sosa/2017/om [R=303,L]
+RewriteRule  ^oboe/?$  %{ENV:BASE}ns/sosa/2017/oboe [R=303,L]
+RewriteRule  ^prov/?$  %{ENV:BASE}ns/sosa/2017/prov/ [R=303,L]
+
+# The sampling ontology IRI tracks the latest edition.
+RewriteRule  ^sampling/?$  %{ENV:BASE}ns/sosa/%{ENV:LATEST}/sampling/ [R=303,L]
 
 
 ######################################################################
@@ -77,11 +92,17 @@ RewriteCond  %{QUERY_STRING}  !^term=
 RewriteRule  ^(.*)$  $1?
 
 ######################################################################
-# A request for the namespace URL /ns/sosa/, i.e., for the
-# directory, is a request for one of the sosa.* files without a
-# specific term.
+# A request for /ns/sosa/ is handled by the redirect above.
 ######################################################################
-RewriteRule  ^$  sosa?term= [N]
+
+######################################################################
+# For non-HTML clients, default unversioned term requests to the
+# latest edition subtree.
+######################################################################
+RewriteCond  %{REQUEST_FILENAME}  !-f
+RewriteCond  %{QUERY_STRING}  =""
+RewriteCond  %{HTTP_ACCEPT}  !text/html [NC]
+RewriteRule  ^(.*)$  %{ENV:BASE}ns/sosa/%{ENV:LATEST}/$1 [R=303,L]
 
 ######################################################################
 # Request for /ns/sosa/foo where foo does not match a file: Put foo in
@@ -96,17 +117,17 @@ RewriteRule  ^(.*)$  sosa?term=$1 [N]
 
 ######################################################################
 # Request for /ns/sosa/sosa.html?term=foo where foo is not empty.
-# Return a redirect to https://www.w3.org/TR/vocab-ssn/#SOSAfoo.
+# Return a redirect to https://www.w3.org/TR/vocab-ssn-%{ENV:LATEST}/#SOSAfoo.
 ######################################################################
 RewriteCond  %{QUERY_STRING}  ^term=(.+)$
-RewriteRule  ^sosa\.html$  https://www.w3.org/TR/vocab-ssn/#SOSA%1 [R=303,QSD,NE,L]
+RewriteRule  ^sosa\.html$  %{ENV:BASE}TR/vocab-ssn-%{ENV:LATEST}/#SOSA%1 [R=303,QSD,NE,L]
 
 ######################################################################
 # Request for /ns/sosa/sosa.html or /ns/sosa/sosa.html?term=
 # Return a redirect without a fragment identifier.
 ######################################################################
 RewriteCond  %{QUERY_STRING}  ^(term=)?$
-RewriteRule  ^sosa\.html$  https://www.w3.org/TR/vocab-ssn/ [R=303,QSD,NE,L]
+RewriteRule  ^sosa\.html$  %{ENV:BASE}TR/vocab-ssn-%{ENV:LATEST}/ [R=303,QSD,NE,L]
 
 ######################################################################
 # When we are here, the request matched some file other than

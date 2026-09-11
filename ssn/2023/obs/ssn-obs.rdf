@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+>
+  <owl:Ontology rdf:about="http://www.w3.org/ns/ssn/obs/">
+    <dcterms:title xml:lang="en">Sensor, Observation, Sample, and Actuator (SOSA) Ontology - actuation module</dcterms:title>
+    <dcterms:description xml:lang="en">Observation classes and properties for the SSN Ontology.</dcterms:description>
+    <dcterms:creator>
+      <foaf:Agent rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb1">
+        <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
+      </foaf:Agent>
+    </dcterms:creator>
+    <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
+    <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-02</dcterms:created>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/ssn/common/"/>
+  </owl:Ontology>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Property">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb2">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isObservedBy"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb3">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/wasObservedBy"/>
+        <owl:allValuesFrom>
+          <rdf:Description rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb4">
+            <owl:unionOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation"/>
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservationCollection"/>
+            </owl:unionOf>
+          </rdf:Description>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb7">
+        <owl:onProperty>
+          <rdf:Description rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb8">
+            <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/isProxyFor"/>
+          </rdf:Description>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Stimulus"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Stimulus">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb31">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/originated"/>
+        <owl:allValuesFrom>
+          <owl:Class rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb32">
+            <owl:unionOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation"/>
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservationCollection"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb35">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isDetectedBy"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb36">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isProxyFor"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb9">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb10">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ObservingProcedure"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb11">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb12">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb13">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb14">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/wasOriginatedBy"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Stimulus"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservingProcedure">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb23">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/implementedBy"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sensor">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb24">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/detects"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Stimulus"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb25">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observes"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb26">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/implements"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ObservingProcedure"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb27">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeObservation"/>
+        <owl:allValuesFrom>
+          <owl:Class rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb28">
+            <owl:unionOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation"/>
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservationCollection"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservationCollection">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb15">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb16">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb17">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb18">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ObservingProcedure"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb19">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasMember"/>
+        <owl:allValuesFrom>
+          <rdf:Description rdf:nodeID="n9b87b966eb5e437ab5d44748149f689eb20">
+            <owl:unionOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation"/>
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservationCollection"/>
+            </owl:unionOf>
+          </rdf:Description>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+  </rdf:Description>
+</rdf:RDF>

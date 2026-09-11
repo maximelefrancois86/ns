@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-   xmlns:dcterms="http://purl.org/dc/terms/"
-   xmlns:foaf="http://xmlns.com/foaf/0.1/"
-   xmlns:owl="http://www.w3.org/2002/07/owl#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
 >
-  <rdf:Description rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b5">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/preparedSample"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/oms/madeOnPlatform">
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isResultOfMadeBySampler"/>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isHostedBy"/>
+    </owl:propertyChainAxiom>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/ssn/oms/">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  <owl:Ontology rdf:about="http://www.w3.org/ns/ssn/oms/">
     <dcterms:title xml:lang="en">OMS Ontology - based on (SOSA) Ontology with SSN axiomatization</dcterms:title>
     <dcterms:description xml:lang="en">This ontology is based on the SOSA Ontology by the W3C/OGC Spatial Data on the Web Working Group, supplemented by some classes and properties required to implement ISO 19156:2023 , with axiomatization following SSN.</dcterms:description>
-    <dcterms:creator rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b1"/>
+    <dcterms:creator>
+      <foaf:Agent rdf:nodeID="n176336ff7a7d4c209e47c8e893e6ab2ab1">
+        <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
+      </foaf:Agent>
+    </dcterms:creator>
     <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
     <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
@@ -25,75 +31,52 @@
     <owl:imports rdf:resource="http://www.w3.org/ns/ssn/obs/"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/ssn/sam/"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b4">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/preparedSample"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b8">
-    <rdf:first rdf:resource="http://www.w3.org/ns/sosa/isResultOfMadeBySampler"/>
-    <rdf:rest rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b9"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b6">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/oms/hasPreparationStep"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/oms/PreparationStep"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/oms/PreparationStep">
-    <rdfs:subClassOf rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b3"/>
-    <rdfs:subClassOf rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b4"/>
-    <rdfs:subClassOf rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b5"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b3">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/oms/PreparationProcedure"/>
-  </rdf:Description>
+  </owl:Ontology>
   <rdf:Description rdf:about="http://www.w3.org/ns/sosa/oms/makesObservationCollection">
-    <owl:propertyChainAxiom rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b10"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b1">
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b7">
-    <rdf:first rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
-    <rdf:rest rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b8"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b2">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/implementedBy"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/oms/PreparationStep"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/oms/madeOnPlatform">
-    <owl:propertyChainAxiom rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b7"/>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hosts"/>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeSamplingHasResult"/>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
+    </owl:propertyChainAxiom>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sample">
-    <rdfs:subClassOf rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b6"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n176336ff7a7d4c209e47c8e893e6ab2ab6">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/oms/hasPreparationStep"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/oms/PreparationStep"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b9">
-    <rdf:first rdf:resource="http://www.w3.org/ns/sosa/isHostedBy"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b10">
-    <rdf:first rdf:resource="http://www.w3.org/ns/sosa/hosts"/>
-    <rdf:rest rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b11"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b12">
-    <rdf:first rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b11">
-    <rdf:first rdf:resource="http://www.w3.org/ns/sosa/madeSamplingHasResult"/>
-    <rdf:rest rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b12"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/sosa/oms/PreparationProcedure">
-    <rdfs:subClassOf rdf:nodeID="n9cdeb9a730c44bd9ba1176e9ca8f48d7b2"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n176336ff7a7d4c209e47c8e893e6ab2ab2">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/implementedBy"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/oms/PreparationStep"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/oms/PreparationStep">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n176336ff7a7d4c209e47c8e893e6ab2ab3">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/oms/PreparationProcedure"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n176336ff7a7d4c209e47c8e893e6ab2ab4">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/preparedSample"/>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="n176336ff7a7d4c209e47c8e893e6ab2ab5">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/preparedSample"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
   </rdf:Description>
 </rdf:RDF>

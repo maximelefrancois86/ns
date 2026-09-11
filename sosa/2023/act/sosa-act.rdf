@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:schema1="http://schema.org/"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/usedProcedure">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuatingProcedure"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Deployment">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasMember">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isResultOf">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/inputValueForExecution">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isHostedBy">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isSubSystemOf">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasSimpleResult">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isMemberOf">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/implementedBy">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/endTime">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasSubSystem">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/usedForExecution">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/propertyFor">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/deployedSystem">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hosts">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/phenomenonOccurred">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/inDeployment">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/resultTime">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasOutput">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/startTime">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/deployedAsset">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/implements">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuatingProcedure"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/phenomenonTime">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isUltimateFeatureOfInterestOf">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasInputValue">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasProperty">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Platform">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isPropertyOf">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/deployedOnPlatform">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasResult">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasDeployment">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/inputFor">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/outputFor">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasInput">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasProcedure">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeByActuator">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/madeBySystem"/>
+    <rdfs:label xml:lang="en">made by actuator</rdfs:label>
+    <skos:definition xml:lang="en">
+  relation from an Actuation or ActuationCollection to the Actuator that made that Actuation or ActuationCollection
+  </skos:definition>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeActuation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/madeExecution"/>
+        <rdfs:label xml:lang="en">made actuation</rdfs:label>
+        <skos:definition xml:lang="en">
+  relation from an Actuator to an Actuation or ActuationCollection it has made
+  </skos:definition>
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/madeByActuator"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/act/"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <rdfs:isDefinedBy>
+      <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/act/">
+        <dcterms:title xml:lang="en">Sensor, Observation, Sample, and Actuator (SOSA) Ontology - actuation module</dcterms:title>
+        <dcterms:description xml:lang="en">Actuation classes and properties for the SSN Ontology.</dcterms:description>
+        <dcterms:creator>
+          <foaf:Agent rdf:nodeID="n9766ef594b35428e90eb52b56ca936d8b1">
+            <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
+          </foaf:Agent>
+        </dcterms:creator>
+        <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
+        <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+        <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-02</dcterms:created>
+        <owl:imports rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </owl:Ontology>
+    </rdfs:isDefinedBy>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Execution">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/actsOnProperty">
+    <rdfs:label xml:lang="en">acts on property</rdfs:label>
+    <skos:definition xml:lang="en">
+  relation from an Actuation to the Property it acted upon
+  </skos:definition>
+    <skos:example xml:lang="en">In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property upon which the Actuator acts is the state of the window as it changes from being open to being closed. </skos:example>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <schema1:rangeIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Property">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </rdf:Description>
+    </schema1:rangeIncludes>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/wasActedOnBy">
+        <rdfs:label xml:lang="en">was acted on by</rdfs:label>
+        <skos:definition xml:lang="en">
+  relation from a Property to an Actuation that changed its state
+  </skos:definition>
+        <skos:example xml:lang="en">In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property upon which the Actuator acts is the state of the window as it changes from being open to being closed. </skos:example>
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/actsOnProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/act/"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/act/"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Actuator">
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/System">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </rdf:Description>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Actuator</rdfs:label>
+    <skos:definition xml:lang="en">
+  System that implements an ActuatingProcedure to change the value of an actuatable Property
+
+  This may be a device, a piece of infrastructure, an agent (including humans), or a software-based system, including systems performing simulations.</skos:definition>
+    <skos:example xml:lang="en">A window actuator for automatic window control, i.e., opening or closing the window.</skos:example>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/act/"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/actsOn">
+    <rdfs:subPropertyOf>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/forProperty">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </rdf:Description>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">acts on</rdfs:label>
+    <skos:definition xml:lang="en">
+  relation from an Actuator to a Property whose state may be changed by that Actuator
+  </skos:definition>
+    <skos:example xml:lang="en">In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property upon which the Actuator acts is the state of the window as it changes from being open to being closed. </skos:example>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isActedOnBy">
+        <rdfs:label xml:lang="en">is acted on by</rdfs:label>
+        <skos:definition xml:lang="en">
+  relation from a Property to an Actuator that may change its state
+  </skos:definition>
+        <skos:example xml:lang="en">In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property upon which the Actuator acts is the state of the window as it changes from being open to being closed. </skos:example>
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/actsOn"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/act/"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/act/"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/ActuatingProcedure">
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Procedure">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </rdf:Description>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Actuating Procedure</rdfs:label>
+    <skos:definition xml:lang="en">
+  workflow, protocol, plan, algorithm, program, or computational method specifying how to make an Actuation
+  
+  An Actuating Procedure is re-usable, and might be applied in many Actuations.
+  It explains the steps to be carried out to arrive at reproducible results.
+  </skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/act/"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/ActuationCollection">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+    <rdfs:label xml:lang="en">Actuation Collection</rdfs:label>
+    <skos:definition xml:lang="en">
+  set of one or more Actuations or ActuationCollections; collections may be nested
+
+  All Actuation properties may appear in an Actuation Collection, including:
+  hasFeatureOfInterest , usedProcedure , madeByActuator , actsOnProperty , endTime ,  hasResult , hasSimpleResult . 
+  If they are present, the values of these properties summarize the values of the matching properties of the member actuations, where membership is either direct or transitive through one or more member actuation collections. 
+  The following consistency rules apply with respect to the Actuation properties: 
+  
+  1. Where an individual Actuation Collection omits a property, a member Actuation (direct or transitive) MAY have any value for that property.
+
+  2. Where an individual Actuation Collection has a single value for a property, each member Actuation (direct or transitive) MUST have that same value for the property - i.e., the collection is homogeneous in that property.  That property MAY then be omitted in any member Actuation or Actuation Collection.
+
+  3. Where an individual Actuation Collection has more than one value for a property, each member Actuation (direct or transitive) MUST have a value for that property that matches one of the values for the property in the collection. 
+  
+  4. Where an individual Actuation Collection has a value for a property that is a range or interval, each member Actuation (direct or transitive) MUST have a value for that property that matches or falls within that range or interval.
+
+  5. Where an individual Actuation Collection has more than one value for a property that is a range or interval, each member Actuation (direct or transitive) MUST have a value for that property that either matches or falls within one of those ranges or intervals.
+  </skos:definition>
+    <skos:note xml:lang="en">The members of a collection do not necessarily share a common value for any property. </skos:note>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/act/"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Actuation">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+    <rdfs:label xml:lang="en">Actuation</rdfs:label>
+    <skos:definition xml:lang="en">
+  act of carrying out an ActuatingProcedure using an Actuator to change the value of an actuatable Property of a FeatureOfInterest
+  
+  In this context hasResult may indicate the value of the Property at the completion of the Actuation
+  </skos:definition>
+    <skos:scopeNote xml:lang="en">
+  An Actuation primarily concerns a single Property of a single FeatureOfInterest. 
+  Changes to multiple properties, or other combinations of Actuations, may be described in an ActuationCollection.
+    
+  Alternatively, applications may choose to encapsulate complexity by defining a complex property with multiple individual components, and a corresponding complex result (e.g., a vector). 
+  This approach is not prohibited by the SSN Ontology, but the details are beyond the scope of SSN.
+  </skos:scopeNote>
+    <skos:note xml:lang="en">relatedObservation SHOULD be used to link to an associated Observation or ObservationCollection that monitors the actuated property to verify that the result value has been obtained. </skos:note>
+    <skos:example xml:lang="en">The activity of automatically closing a window if the temperature in a room drops below 20 degrees Celsius. The activity is the Actuation and the device that closes the window is the Actuator. The Procedure is the rule, plan, or specification that defines the conditions that triggers the Actuation, here a drop in temperature. </skos:example>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/act/"/>
+  </owl:Class>
+</rdf:RDF>

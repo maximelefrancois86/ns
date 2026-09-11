@@ -206,6 +206,7 @@ sosa:usedProcedure
 .
 ssn:ext
   a owl:Ontology ;
+  owl:versionIRI <http://www.w3.org/ns/ssn/2017/ext> ;
   dcterms:created "2018-03-08"^^xsd:date ;
   dcterms:creator <http://orcid.org/0000-0002-3884-3420> ;
   dcterms:description """Some extensions to the SSN Ontology, to support

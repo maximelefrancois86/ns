@@ -111,6 +111,7 @@ sosa:Procedure
 .
 sosa:om
   rdf:type owl:Ontology ;
+  owl:versionIRI <http://www.w3.org/ns/sosa/2017/om> ;
   dc:creator "Simon J D Cox" ;
   dct:created "2016-12-14"^^xsd:date ;
   dct:creator <http://orcid.org/0000-0002-3884-3420> ;

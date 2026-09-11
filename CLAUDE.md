@@ -39,8 +39,11 @@ servir **les deux éditions** :
   placés depuis `../sdw-sosa-ssn` par un script, qui déduit leur emplacement de
   l'IRI d'ontologie et de l'IRI de version que chaque fichier déclare. Une
   correction sur un fichier RDF se fait dans `sdw-sosa-ssn`, puis on resynchronise.
-- **Les fichiers de 2017 sont figés.** Ils ne bougent que de place, jamais de
-  contenu : la Recommendation de 2017 reste ce qu'elle est.
+- **Les fichiers de 2017 ne changent pas d'ontologie.** Aucun terme, aucun
+  axiome, aucune définition : la Recommendation de 2017 reste ce qu'elle est.
+  Seules leurs **métadonnées de version** se complètent — `owl:versionIRI`, et
+  ce qui oriente le lecteur vers l'édition courante — et alors dans toutes leurs
+  sérialisations à la fois, qui doivent rester équivalentes.
 - **Toute règle de réécriture est accompagnée d'un test.** Les tests sont des
   scripts `regression-tests.sh` en bash + `curl`, dans la forme déjà en place
   dans le dépôt (convention de Bert Bos) : un tableau de cas

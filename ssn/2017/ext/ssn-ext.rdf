@@ -15,6 +15,7 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
   xml:base="http://www.w3.org/ns/ssn/ext">
   <owl:Ontology rdf:about="">
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/ssn/2017/ext"/>
     <dcterms:description>Some extensions to the SSN Ontology, to support&#xD;
 &#xD;
 1. discovery and use of observation and sample data through links to an ultimate feature-of-interest, or sample&#xD;

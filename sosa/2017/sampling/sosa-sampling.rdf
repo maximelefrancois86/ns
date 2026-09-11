@@ -6,6 +6,7 @@
          xmlns:schema="http://schema.org/">
 
   <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/sampling/">
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2017/sampling/"/>
     <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
   </owl:Ontology>

@@ -17,6 +17,7 @@
      xmlns:ssn-system="http://www.w3.org/ns/ssn/systems/"
      xmlns:sosa="http://www.w3.org/ns/sosa/">
     <owl:Ontology rdf:about="http://www.w3.org/ns/ssn/systems/">
+        <owl:versionIRI rdf:resource="http://www.w3.org/ns/ssn/2017/systems/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology"/>
         <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>

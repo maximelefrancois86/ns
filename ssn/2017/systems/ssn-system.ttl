@@ -30,6 +30,7 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
 
 
 ssn-system: a owl:Ontology , voaf:Vocabulary ;
+  owl:versionIRI <http://www.w3.org/ns/ssn/2017/systems/> ;
   dcterms:title "System capabilities, operating ranges, and survival ranges ontology"@en ;
   dcterms:description "This ontology describes system capabilities, operating ranges, and survival ranges."@en ;
   dcterms:creator [ a foaf:Agent ; foaf:name "W3C/OGC Spatial Data on the Web Working Group"@en ] ;

@@ -72,6 +72,7 @@
   </rdf:Description>
 
   <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/oboe">
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2017/oboe"/>
     <dc11:creator>Simon J D COX</dc11:creator>
     <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-03-05</dc:created>
     <dc:creator rdf:resource="http://orcid.org/0000-0002-3884-3420"/>

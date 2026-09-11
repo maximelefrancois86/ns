@@ -85,6 +85,7 @@
   </rdf:Description>
 
   <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/prov">
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2017/prov"/>
     <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-12-14</dc:created>
     <dc:creator>Simon J D Cox</dc:creator>
     <dc:creator>

@@ -18,6 +18,7 @@
      xmlns:sr="http://www.w3.org/ns/sosa/sampling/"
      xmlns:sosa="http://www.w3.org/ns/sosa/">
     <owl:Ontology rdf:about="http://www.w3.org/ns/ssn/dul">
+        <owl:versionIRI rdf:resource="http://www.w3.org/ns/ssn/2017/dul"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/sampling"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
     </owl:Ontology>

@@ -23,8 +23,8 @@ conséquences pour `w3c/ns`.
 | `/ns/ssn/dul` | `/ns/ssn/2017/dul` | — l'alignement est passé sous `/ns/sosa/dul` | **permanente vers 2017** |
 | `/ns/sosa/om` | `/ns/sosa/2017/om` | — remplacé par `/ns/sosa/oms/` (OMS, ISO 19156:2023) | **permanente vers 2017** |
 | `/ns/sosa/oboe` | `/ns/sosa/2017/oboe` | `/ns/sosa/2023/oboe` | **à trancher, voir ci-dessous** |
-| `/ns/sosa/prov` | `/ns/sosa/2017/prov/` | `/ns/sosa/2023/prov` | **à trancher, voir ci-dessous** |
-| `/ns/ssn/ext/` | `/ns/ssn/2017/ext/` | — pas d'équivalent 2023 | **permanente vers 2017** |
+| `/ns/sosa/prov` | `/ns/sosa/2017/prov` | `/ns/sosa/2023/prov` | **à trancher, voir ci-dessous** |
+| `/ns/ssn/ext` | `/ns/ssn/2017/ext` | — pas d'équivalent 2023 | **permanente vers 2017** |
 
 Les modules nouveaux en 2023 (`sosa/act/`, `sosa/obs/`, `sosa/sam/`,
 `sosa/common/`, `sosa/dep/`, `sosa/oms/`, `sosa/systems/`, `sosa/dul`,
@@ -65,7 +65,19 @@ lecture littérale du point 3.
 
 ## Détail qui compte pour les règles de réécriture
 
-En 2017, `sosa-prov` est servi depuis un **dossier** : son IRI est
-`…/ns/sosa/prov/`, avec la barre oblique finale. En 2023, le fichier déclare
-`…/ns/sosa/prov`, **sans** barre oblique, et il est donc servi comme un fichier
-plat, à la manière de `sosa/oboe` en 2017. Les deux formes doivent résoudre.
+Quatre IRI d'ontologie de 2017 n'ont **pas** de barre oblique finale —
+`…/sosa/oboe`, `…/sosa/om`, `…/sosa/prov`, `…/ssn/dul`, `…/ssn/ext` — alors que
+`…/sosa/`, `…/ssn/`, `…/sosa/sampling/` et `…/ssn/systems/` en ont une. C'est ce
+que déclarent les fichiers, vérifié le 2026-09-11.
+
+Deux d'entre elles sont servies depuis un **dossier** malgré l'absence de barre
+oblique : `sosa/2017/prov/sosa-prov.ttl` et `ssn/2017/ext/ssn-ext.ttl`. Une
+requête sur l'IRI de version `…/ns/sosa/2017/prov` tombe donc sur un répertoire,
+et Apache y répond par défaut par une redirection 301 vers `…/prov/`
+(`DirectorySlash`). Il faut soit désactiver ce comportement dans le `.htaccess`,
+soit l'assumer et le tester : l'IRI de version doit résoudre telle qu'elle est
+publiée.
+
+En 2023, `sosa-prov` déclare la même IRI sans barre oblique mais est servi comme
+un fichier plat, `sosa/2023/prov.ttl`, à la manière de `sosa/oboe` en 2017 : pas
+de dossier, donc pas de question.

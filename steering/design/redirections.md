@@ -1,8 +1,8 @@
 # Ce que les IRI doivent servir, édition par édition
 
-Relevé du 2026-09-11, extrait de `vocab-ssn-2023-transition.md` avant sa
-suppression d'ici. Le document lui-même vit désormais dans `../sdw` : il décrit
-ce qu'il faut écrire dans la spécification 2017. Ne restent ci-dessous que les
+Relevé du 2026-09-11, extrait de `vocab-ssn-2023-transition.md`. Ce brouillon
+n'existe plus : ce qu'il demandait à la spécification 2017 est repris, complété
+et tranché dans [[modification-de-la-rec-2017]] ; ne restent ci-dessous que ses
 conséquences pour `w3c/ns`.
 
 ## Le principe
@@ -19,7 +19,7 @@ conséquences pour `w3c/ns`.
 | `/ns/sosa/` | `/ns/sosa/2017/` | `/ns/sosa/2023/` | vers l'édition courante |
 | `/ns/ssn/` | `/ns/ssn/2017/` | `/ns/ssn/2023/` | vers l'édition courante |
 | `/ns/sosa/sampling/` | `/ns/sosa/2017/sampling/` | `/ns/sosa/2023/sampling/` | vers l'édition courante |
-| `/ns/ssn/systems/` | `/ns/ssn/2017/systems/` | — le module est passé sous `/ns/sosa/systems/` | **permanente vers 2017** |
+| `/ns/ssn/systems/` | `/ns/ssn/2017/systems/` | — le module est passé sous `/ns/sosa/systems/` | **permanente vers 2017** | pas de redirection permanente, seulement du 302. partout. une édition 2054 pourrait rétablir le module sous `/ns/ssn/systems/`
 | `/ns/ssn/dul` | `/ns/ssn/2017/dul` | — l'alignement est passé sous `/ns/sosa/dul` | **permanente vers 2017** |
 | `/ns/sosa/om` | `/ns/sosa/2017/om` | — remplacé par `/ns/sosa/oms/` (OMS, ISO 19156:2023) | **permanente vers 2017** |
 | `/ns/sosa/oboe` | `/ns/sosa/2017/oboe` | `/ns/sosa/2023/oboe` | **à trancher, voir ci-dessous** |
@@ -54,6 +54,9 @@ Les deux lectures possibles :
 1. **L'IRI d'ontologie suit l'édition courante**, comme pour `sampling`. Le
    point 3 de la transition est une erreur de rédaction, et le texte de la REC
    2017 doit pointer vers `…/2017/oboe`, ce que son point 2 fait déjà.
+
+   --> oui, l'IRI d'ontologie suit l'éditino courante. c'est une erreur dans `vocab-ssn-2023-transition.md`
+   
 2. **Ces deux alignements restent ancrés sur 2017.** Il faut alors que la spec
    2023 cite ses alignements par leur IRI de version, et que les fichiers de
    `sdw-sosa-ssn` déclarent une IRI d'ontologie distincte.
@@ -78,6 +81,15 @@ et Apache y répond par défaut par une redirection 301 vers `…/prov/`
 soit l'assumer et le tester : l'IRI de version doit résoudre telle qu'elle est
 publiée.
 
+assumer et tester.
+
 En 2023, `sosa-prov` déclare la même IRI sans barre oblique mais est servi comme
 un fichier plat, `sosa/2023/prov.ttl`, à la manière de `sosa/oboe` en 2017 : pas
 de dossier, donc pas de question.
+
+## Redirection des IRI de terme
+
+chaque IRI de terme doit rediriger vers la dernière version qui déclare ce terme.
+négociation de contenu: si l'utilisateur demande `text/html`, il est redirigé vers l'ancre où est défini ce terme dans la page HTML correspondante.
+
+une IRI de terme non existante doit renvoyer 404 dans tous les cas.

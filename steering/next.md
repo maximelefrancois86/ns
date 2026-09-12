@@ -13,8 +13,27 @@
    Instruit dans [[redirections]]. En attendant, l'IRI d'ontologie suivra
    l'édition courante, comme pour tous les autres modules.
 
-3. **La spec 2017 : voie éditoriale ou errata ?** Reste la seule question
-   ouverte de [[modification-de-la-rec-2017]], et elle revient au WG.
+3. **La spec 2017 : tranché, tout passe par le bandeau de statut.** Ni
+   republication éditoriale, ni errata : le contenu des `div.warning` est porté
+   par un `<details>` dans le bandeau « New Version Available », seul endroit
+   que la politique in-place autorise. Le texte prêt à insérer est dans
+   [[modification-de-la-rec-2017]]. Restent deux choses à faire porter par toi :
+   soumettre à Bert Bos le fait que notre bandeau est plus étoffé que les
+   précédents, et caler la demande au Webmaster sur la date de publication de la
+   REC 2023.
+
+   **Fait dans `sdw-sosa-ssn`** : la spec 2023 cite désormais chacun de ses
+   modules par son IRI d'ontologie **et** son IRI de version, pour que la
+   prochaine édition n'ait pas à rouvrir la REC 2023 —
+   [PR w3c/sdw-sosa-ssn#524](https://github.com/w3c/sdw-sosa-ssn/pull/524),
+   branche `cite-version-iris`. Complétés : les huit modules de bas niveau du
+   cœur et les deux graphes de termes dépréciés dans § Distribution, et les
+   alignements BFO/CCO et IDO. Un script vérifie que les 26 ontologies déclarées
+   sous `/ns/sosa/` ou `/ns/ssn/` ont bien leurs deux IRI citées, et
+   `check_repository.py` rend la même sortie qu'avant. Trois points sont soumis
+   au WG dans la PR : documenter ou non `sosa/dep/` et `ssn/dep/`, l'écart avec
+   le RDF qui ne déclare `owl:versionIRI` que sur trois ontologies (point 1
+   ci-dessus), et le cas de `sosa-sdo.ttl` (point 5).
 
 4. **Le script de placement n'est pas committé.** Il est écrit et il tourne :
    `sdw-sosa-ssn/ssn/scripts/place_namespace_files.py`. Je ne commite pas dans

@@ -45,6 +45,10 @@ DCAT vit la même situation ici, et la traite ainsi (`dcat2.ttl`, `dcat3.ttl`) :
 C'est un précédent qui compte : même dépôt, même serveur, même problème, et un
 vocabulaire — DCAT — que le W3C recommande pour ça.
 
+
+oui, parfait, faire de même.
+
+
 ## Proposition
 
 Ajouter à chaque module, des deux éditions :
@@ -85,6 +89,11 @@ namespace en 2023, et `sosa/om` a été remplacé par `sosa/oms/`.
    ou autre chose ?
 2. Si oui, est-ce que cela se fait dans le même mouvement pour 2017 (ici) et
    pour 2023 (PR sur `sdw-sosa-ssn`), ou est-ce qu'on livre 2017 d'abord ?
+
+   oui. 2017 ici et 2023 par PR, qui explique l'approche
+
 3. Est-ce que le WG veut, en plus, une dépréciation explicite de ce qui n'a pas
    de suite en 2023 — `ssn:ext`, `sosa:om` — par `owl:deprecated true` ?
    Attention : cela change la sémantique de fichiers publiés avec une REC.
+
+je veux. on proposera au WG par PR, qui tranchera.

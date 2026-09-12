@@ -23,15 +23,17 @@ servir **les deux éditions** :
   redirigent vers l'édition courante ;
 - chaque édition a son IRI de version sous une année : `…/ns/sosa/2017/`,
   `…/ns/sosa/2023/` ;
-- les modules figés en 2017 (`ssn/systems/`, `ssn/dul`, `sosa/om`, `sosa/oboe`,
-  `sosa/prov/`) redirigent en permanence vers leur emplacement 2017.
+- les modules sans suite en 2023 (`ssn/systems/`, `ssn/dul`, `sosa/om`,
+  `ssn/ext`) redirigent en permanence vers leur emplacement 2017. `sosa/oboe`
+  et `sosa/prov` sont bien mis à jour en 2023 et suivent l'édition courante :
+  voir `steering/design/redirections.md`.
 
 ## Les dépôts voisins
 
 | Dépôt | Rôle |
 |---|---|
 | `../sdw-sosa-ssn` (`w3c/sdw-sosa-ssn`) | **Source de vérité** des fichiers RDF (`ssn/rdf/`) et de la spécification 2023. Contient aussi `ssn/scripts/check_repository.ldpy`, qui dit quelles ontologies existent et ce que chaque fichier déclare. |
-| `w3c/sdw`, branche `gh-pages` | Source historique de la spécification 2017 : `ssn/index.html`, dernière version complète au commit `60c08b65` (2021-05-10), remplacée depuis par une page de redirection. C'est la cible probable de la PR décrite par `vocab-ssn-2023-transition.md`. |
+| `w3c/sdw`, branche `gh-pages` | Editor's draft de la spécification 2017. `ssn/index.html` est devenu une page de redirection ; le texte complet y est toujours, sous `ssn/index-ssn.html`. La REC publiée, elle, est un instantané figé du côté W3C : voir `steering/decisions/modification-de-la-rec-2017.md`. |
 
 ## Règles de travail sur le contenu
 

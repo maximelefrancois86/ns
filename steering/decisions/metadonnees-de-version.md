@@ -1,9 +1,10 @@
 # Faire savoir en RDF qu'une édition plus récente existe
 
-Question ouverte, posée le 2026-09-11. `owl:versionIRI` est en place ; ce
-document traite de ce qui va au-delà.
+Tranché le 2026-09-12 : on suit le précédent DCAT, et on déprécie ce que 2023
+ne sert plus. Appliqué à l'édition 2017 dans ce dépôt ; l'édition 2023 suivra
+par pull request sur `sdw-sosa-ssn`, qui expliquera l'approche au WG.
 
-## Ce qui est fait
+## Les IRI de version
 
 Les neuf ontologies de 2017 déclarent désormais leur IRI de version, dans
 chacune de leurs sérialisations :
@@ -45,13 +46,9 @@ DCAT vit la même situation ici, et la traite ainsi (`dcat2.ttl`, `dcat3.ttl`) :
 C'est un précédent qui compte : même dépôt, même serveur, même problème, et un
 vocabulaire — DCAT — que le W3C recommande pour ça.
 
+## Ce qui a été écrit dans l'édition 2017
 
-oui, parfait, faire de même.
-
-
-## Proposition
-
-Ajouter à chaque module, des deux éditions :
+À chaque module :
 
 ```turtle
 sosa: a owl:Ontology ;
@@ -62,7 +59,25 @@ sosa: a owl:Ontology ;
   ...
 ```
 
-et, du côté 2023 seulement, ce qu'OWL sait déjà exprimer :
+Et, pour un module dont l'édition 2023 ne sert plus l'IRI d'ontologie, la
+dépréciation, avec son successeur quand il y en a un :
+
+```turtle
+sosa:om a owl:Ontology ;
+  dcat:hasCurrentVersion <http://www.w3.org/ns/sosa/2017/om> ;
+  dcterms:isReplacedBy <http://www.w3.org/ns/sosa/oms/> ;
+  owl:deprecated true ;
+  ...
+```
+
+**La règle appliquée** : une ontologie de 2017 dont l'IRI n'est plus servie par
+l'édition 2023 est dépréciée. Quatre modules le sont — `ssn:ext`, `sosa:om`,
+`ssn:dul` et `ssn:systems/` — et les trois derniers nomment leur successeur.
+Lu autrement, « ce qui n'a pas de suite en 2023 » aurait pu ne désigner que
+`ssn:ext` et `sosa:om` ; `ssn:dul` et `ssn:systems/` ont bien un successeur,
+mais sous une autre IRI, et un client qui résout l'ancienne doit l'apprendre.
+
+Du côté 2023, ce qu'OWL sait déjà exprimer viendra en plus :
 
 ```turtle
   owl:priorVersion <http://www.w3.org/ns/sosa/2017/> ;
@@ -74,26 +89,21 @@ la transition annonce que 2023 « adds features while remaining compatible » �
 mais module par module, pas en bloc : `ssn/systems/` et `ssn/dul` ont changé de
 namespace en 2023, et `sosa/om` a été remplacé par `sosa/oms/`.
 
-## Ce que ça coûte
+## Ce que ça a coûté, et ce que ça coûtera
 
-- Sur 2017 : neuf modules, quatre sérialisations pour `ssn-ext`, deux pour les
-  autres. L'ajout est mécanique, comme l'a été `owl:versionIRI`.
+- Sur 2017 : fait. Neuf modules, vingt fichiers, chaque énoncé relu dans le
+  graphe reparsé. Le préfixe déjà lié à un namespace dans un document est
+  réutilisé plutôt que doublé — `om.rdf` lie `dcterms:` sous le préfixe `dc:`.
 - Sur 2023 : rien ici. Ces fichiers appartiennent à `sdw-sosa-ssn` et ne
   s'éditent pas dans ce dépôt ; il faut une PR là-bas, et une resynchronisation.
 - `dcat:hasCurrentVersion` sur l'édition 2017 devra être mis à jour à chaque
   nouvelle édition. C'est le prix d'un pointeur vers l'avant, et DCAT le paie.
 
-## Ce qui reste à trancher
+## Ce qui reste
 
-1. Va-t-on au-delà de `owl:versionIRI` ? Si oui, la proposition DCAT ci-dessus
-   ou autre chose ?
-2. Si oui, est-ce que cela se fait dans le même mouvement pour 2017 (ici) et
-   pour 2023 (PR sur `sdw-sosa-ssn`), ou est-ce qu'on livre 2017 d'abord ?
-
-   oui. 2017 ici et 2023 par PR, qui explique l'approche
-
-3. Est-ce que le WG veut, en plus, une dépréciation explicite de ce qui n'a pas
-   de suite en 2023 — `ssn:ext`, `sosa:om` — par `owl:deprecated true` ?
-   Attention : cela change la sémantique de fichiers publiés avec une REC.
-
-je veux. on proposera au WG par PR, qui tranchera.
+La pull request sur `sdw-sosa-ssn` : `dcat:version "2023"`, les deux éditions
+en `dcat:hasVersion`, `dcat:hasCurrentVersion`, et ce qu'OWL exprime —
+`owl:priorVersion`, et `owl:backwardCompatibleWith` là où la compatibilité est
+réelle, module par module. C'est elle qui soumet l'approche au WG, dépréciation
+comprise : marquer `owl:deprecated true` des graphes publiés avec une REC change
+leur sémantique, et c'est au WG de l'assumer.

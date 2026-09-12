@@ -24,15 +24,19 @@ servir **les deux éditions** :
 - chaque édition a son IRI de version sous une année : `…/ns/sosa/2017/`,
   `…/ns/sosa/2023/` ;
 - les modules sans suite en 2023 (`ssn/systems/`, `ssn/dul`, `sosa/om`,
-  `ssn/ext`) redirigent en permanence vers leur emplacement 2017. `sosa/oboe`
-  et `sosa/prov` sont bien mis à jour en 2023 et suivent l'édition courante :
-  voir `steering/design/redirections.md`.
+  `ssn/ext`) servent 2017, leur dernière édition. `sosa/oboe` et `sosa/prov`
+  sont bien mis à jour en 2023 et suivent l'édition courante ;
+- une IRI de terme sert la dernière édition qui déclare ce terme, et une IRI de
+  terme inconnue renvoie 404 ;
+- **jamais de redirection permanente**, uniquement du 302 et du 303.
+
+La politique complète est dans `steering/decisions/politique-de-redirection.md`.
 
 ## Les dépôts voisins
 
 | Dépôt | Rôle |
 |---|---|
-| `../sdw-sosa-ssn` (`w3c/sdw-sosa-ssn`) | **Source de vérité** des fichiers RDF (`ssn/rdf/`) et de la spécification 2023. Contient aussi `ssn/scripts/check_repository.ldpy`, qui dit quelles ontologies existent et ce que chaque fichier déclare. |
+| `../sdw-sosa-ssn` (`w3c/sdw-sosa-ssn`) | **Source de vérité** des fichiers RDF (`ssn/rdf/`) et de la spécification 2023. Y vit aussi tout l'outillage : `ssn/scripts/place_namespace_files.py`, qui place les fichiers ici, et `ssn/scripts/check_repository.ldpy`, qui dit quelles ontologies existent et ce que chaque fichier déclare. **Aucun script ne vit dans `ns`.** |
 | `w3c/sdw`, branche `gh-pages` | Editor's draft de la spécification 2017. `ssn/index.html` est devenu une page de redirection ; le texte complet y est toujours, sous `ssn/index-ssn.html`. La REC publiée, elle, est un instantané figé du côté W3C : voir `steering/decisions/modification-de-la-rec-2017.md`. |
 
 ## Règles de travail sur le contenu
@@ -54,7 +58,8 @@ servir **les deux éditions** :
   est signalé explicitement, jamais modifié en silence.
 - **Les tests tournent en local** contre un Apache en conteneur qui sert le
   dépôt comme `https://www.w3.org/ns/`, avant toute PR.
-- **Environnement Python** : `.venv/bin/python` (rdflib).
+- **Environnement Python** : `~/.venvs/ldpy`, qui a rdflib et
+  linked-data-python. Il n'y a pas de `.venv` dans ce dépôt.
 
 ## Le cycle d'une itération
 
@@ -84,7 +89,6 @@ qui casse la cohérence n'est pas terminée.
 | `steering/design/<sujet>.md` | Une fiche par question de conception, avec ses interrogation, la version longue des questions ouvertes, etc. | vivant, court à moyen |
 | `steering/decisions/<sujet>.md` | Une fiche par décision tranchée : la décision, la date, pourquoi, ce qu'elle implique. Ce qui quitte `next.md` parce que c'est tranché arrive ici. | permanent |
 | `steering/steps/AAAA-MM-JJTHHMM_sujet.md` | Une fiche par itération de travail : ce qui a été fait, ce qui a été trouvé, ce qui reste. C'est l'historique. | permanent, jamais réécrit |
-| `scripts/` | L'outillage de transition : placement des fichiers RDF depuis `../sdw-sosa-ssn`, génération des sérialisations. Son emplacement définitif reste à trancher (voir `steering/next.md`). | à trancher |
 | `docker-compose.yml`, `docker/` | L'Apache local qui sert le dépôt comme `https://www.w3.org/ns/` pour faire tourner les tests. N'entre pas dans la PR : supprimé au squash. | jusqu'à la PR |
 
 Un document de référence qui devient faux est corrigé ou marqué périmé en tête de

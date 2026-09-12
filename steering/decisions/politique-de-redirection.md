@@ -1,9 +1,23 @@
 # Ce que les IRI doivent servir, édition par édition
 
-Relevé du 2026-09-11, extrait de `vocab-ssn-2023-transition.md`. Ce brouillon
-n'existe plus : ce qu'il demandait à la spécification 2017 est repris, complété
-et tranché dans [[modification-de-la-rec-2017]] ; ne restent ci-dessous que ses
-conséquences pour `w3c/ns`.
+Tranché le 2026-09-12. Relevé initial du 2026-09-11, extrait de
+`vocab-ssn-2023-transition.md`. Ce brouillon n'existe plus : ce qu'il demandait
+à la spécification 2017 est repris, complété et tranché dans
+[[modification-de-la-rec-2017]] ; ne restent ci-dessous que ses conséquences
+pour `w3c/ns`.
+
+## Les quatre règles
+
+1. **Une IRI d'ontologie sert l'édition courante.** Sans exception : `oboe` et
+   `prov` comprises, que la transition prétendait ancrer sur 2017.
+2. **Jamais de redirection permanente.** Que du temporaire — 302 vers une page,
+   303 vers une ressource. Une édition de 2054 pourrait rétablir un module
+   abandonné en 2023 sous son IRI d'origine ; un 301 mis en cache chez les
+   clients rendrait ce rétablissement invisible.
+3. **Une IRI de terme sert la dernière édition qui déclare ce terme.** Un client
+   qui demande `text/html` est redirigé vers l'ancre où cette édition définit le
+   terme.
+4. **Une IRI de terme inconnue renvoie 404**, quel que soit le `Accept`.
 
 ## Le principe
 
@@ -19,12 +33,12 @@ conséquences pour `w3c/ns`.
 | `/ns/sosa/` | `/ns/sosa/2017/` | `/ns/sosa/2023/` | vers l'édition courante |
 | `/ns/ssn/` | `/ns/ssn/2017/` | `/ns/ssn/2023/` | vers l'édition courante |
 | `/ns/sosa/sampling/` | `/ns/sosa/2017/sampling/` | `/ns/sosa/2023/sampling/` | vers l'édition courante |
-| `/ns/ssn/systems/` | `/ns/ssn/2017/systems/` | — le module est passé sous `/ns/sosa/systems/` | **permanente vers 2017** | pas de redirection permanente, seulement du 302. partout. une édition 2054 pourrait rétablir le module sous `/ns/ssn/systems/`
-| `/ns/ssn/dul` | `/ns/ssn/2017/dul` | — l'alignement est passé sous `/ns/sosa/dul` | **permanente vers 2017** |
-| `/ns/sosa/om` | `/ns/sosa/2017/om` | — remplacé par `/ns/sosa/oms/` (OMS, ISO 19156:2023) | **permanente vers 2017** |
-| `/ns/sosa/oboe` | `/ns/sosa/2017/oboe` | `/ns/sosa/2023/oboe` | **à trancher, voir ci-dessous** |
-| `/ns/sosa/prov` | `/ns/sosa/2017/prov` | `/ns/sosa/2023/prov` | **à trancher, voir ci-dessous** |
-| `/ns/ssn/ext` | `/ns/ssn/2017/ext` | — pas d'équivalent 2023 | **permanente vers 2017** |
+| `/ns/ssn/systems/` | `/ns/ssn/2017/systems/` | — le module est passé sous `/ns/sosa/systems/` | vers 2017, sa dernière édition |
+| `/ns/ssn/dul` | `/ns/ssn/2017/dul` | — l'alignement est passé sous `/ns/sosa/dul` | vers 2017, sa dernière édition |
+| `/ns/sosa/om` | `/ns/sosa/2017/om` | — remplacé par `/ns/sosa/oms/` (OMS, ISO 19156:2023) | vers 2017, sa dernière édition |
+| `/ns/sosa/oboe` | `/ns/sosa/2017/oboe` | `/ns/sosa/2023/oboe` | vers l'édition courante |
+| `/ns/sosa/prov` | `/ns/sosa/2017/prov` | `/ns/sosa/2023/prov` | vers l'édition courante |
+| `/ns/ssn/ext` | `/ns/ssn/2017/ext` | — pas d'équivalent 2023 | vers 2017, sa dernière édition |
 
 Les modules nouveaux en 2023 (`sosa/act/`, `sosa/obs/`, `sosa/sam/`,
 `sosa/common/`, `sosa/dep/`, `sosa/oms/`, `sosa/systems/`, `sosa/dul`,
@@ -32,7 +46,7 @@ Les modules nouveaux en 2023 (`sosa/act/`, `sosa/obs/`, `sosa/sam/`,
 propriétés, et leurs jumeaux `ssn/`) n'existent que sous 2023 : leur IRI
 d'ontologie sert l'édition courante, sans redirection permanente.
 
-## La question à trancher : oboe et prov
+## Pourquoi oboe et prov suivent l'édition courante
 
 `vocab-ssn-2023-transition.md` demande, pour ces deux alignements, deux choses
 qui se contredisent :
@@ -51,20 +65,12 @@ version, et l'IRI qu'il déclare lui-même sert un autre document que lui.
 
 Les deux lectures possibles :
 
-1. **L'IRI d'ontologie suit l'édition courante**, comme pour `sampling`. Le
-   point 3 de la transition est une erreur de rédaction, et le texte de la REC
-   2017 doit pointer vers `…/2017/oboe`, ce que son point 2 fait déjà.
-
-   --> oui, l'IRI d'ontologie suit l'éditino courante. c'est une erreur dans `vocab-ssn-2023-transition.md`
-   
-2. **Ces deux alignements restent ancrés sur 2017.** Il faut alors que la spec
-   2023 cite ses alignements par leur IRI de version, et que les fichiers de
-   `sdw-sosa-ssn` déclarent une IRI d'ontologie distincte.
-
-La lecture 1 est cohérente avec tout le reste du document et avec ce que
-déclarent les fichiers ; c'est elle qui est appliquée tant que le WG n'a pas
-tranché. L'état actuel de `sosa/.htaccess` applique la lecture 2, héritée d'une
-lecture littérale du point 3.
+**C'est le point 3 de ces sections qui est une erreur de rédaction dans
+`vocab-ssn-2023-transition.md`.** L'IRI d'ontologie suit l'édition courante,
+comme pour tous les autres modules ; le texte de la REC 2017 doit pointer vers
+`…/2017/oboe` et `…/2017/prov`, ce que le point 2 de ces mêmes sections demande
+déjà. L'état de `sosa/.htaccess` hérité du premier jet applique la lecture
+contraire : il est à refaire.
 
 ## Détail qui compte pour les règles de réécriture
 
@@ -79,9 +85,7 @@ requête sur l'IRI de version `…/ns/sosa/2017/prov` tombe donc sur un réperto
 et Apache y répond par défaut par une redirection 301 vers `…/prov/`
 (`DirectorySlash`). Il faut soit désactiver ce comportement dans le `.htaccess`,
 soit l'assumer et le tester : l'IRI de version doit résoudre telle qu'elle est
-publiée.
-
-assumer et tester.
+publiée. **Tranché : on assume la redirection d'Apache, et on la teste.**
 
 En 2023, `sosa-prov` déclare la même IRI sans barre oblique mais est servi comme
 un fichier plat, `sosa/2023/prov.ttl`, à la manière de `sosa/oboe` en 2017 : pas
@@ -89,7 +93,7 @@ de dossier, donc pas de question.
 
 ## Redirection des IRI de terme
 
-chaque IRI de terme doit rediriger vers la dernière version qui déclare ce terme.
-négociation de contenu: si l'utilisateur demande `text/html`, il est redirigé vers l'ancre où est défini ce terme dans la page HTML correspondante.
-
-une IRI de terme non existante doit renvoyer 404 dans tous les cas.
+Règles 3 et 4 ci-dessus. Ce qu'elles coûtent à mettre en œuvre, et comment, est
+instruit dans [[redirection-des-termes]] : elles demandent que le serveur
+connaisse la liste des termes de chaque édition, ce que les règles génériques
+d'aujourd'hui ne font pas.

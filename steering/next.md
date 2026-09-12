@@ -2,68 +2,48 @@
 
 ## Pour Maxime
 
-1. **Métadonnées de version, au-delà de `owl:versionIRI`.** Instruit dans
-   [[metadonnees-de-version]], avec le précédent DCAT de ce dépôt. Trois
-   questions : va-t-on plus loin, dans le même mouvement pour 2017 et 2023, et
-   jusqu'à `owl:deprecated` sur ce qui n'a pas de suite en 2023 (`ssn:ext`,
-   `sosa:om`) ?
+1. **Rien n'est committé dans `sdw-sosa-ssn`**, et ça commence à faire :
+   `ssn/scripts/place_namespace_files.py` (nouveau), `ssn/scripts/check_repository.ldpy`
+   (gagne `check_publication()` : la section `=== Ontology Declarations ===` et
+   deux contrôles non fatals) et `ssn/scripts/README.md`. Tout est écrit et
+   tourne, sur la branche `ldpy-checks`. Dis-moi si je commite, et où.
 
-2. **`oboe` et `prov` : quelle édition sert l'IRI d'ontologie ?** La transition
-   se contredit sur ces deux alignements, et l'édition 2023 les met bien à jour.
-   Instruit dans [[redirections]]. En attendant, l'IRI d'ontologie suivra
-   l'édition courante, comme pour tous les autres modules.
+2. **Un bloc généré dans un `.htaccess`, l'équipe du W3C l'acceptera-t-elle ?**
+   Servir 404 sur une IRI de terme inconnue oblige le serveur à connaître la
+   liste des termes, donc à porter une alternance de 165 termes produite par
+   script. Les solutions de repli sont dans [[redirection-des-termes]]. C'est la
+   seule inconnue qui peut faire capoter la règle 4.
 
-3. **La spec 2017 : tranché, tout passe par le bandeau de statut.** Ni
-   republication éditoriale, ni errata : le contenu des `div.warning` est porté
-   par un `<details>` dans le bandeau « New Version Available », seul endroit
-   que la politique in-place autorise. Le texte prêt à insérer est dans
-   [[modification-de-la-rec-2017]]. Restent deux choses à faire porter par toi :
-   soumettre à Bert Bos le fait que notre bandeau est plus étoffé que les
-   précédents, et caler la demande au Webmaster sur la date de publication de la
-   REC 2023.
+3. **`…/ns/sosa/hasSampledFeature`** est le seul terme du cœur de 2017 que 2023
+   ne reprend pas sous la même IRI. Il redirige vers sa définition de 2017, ou
+   vers ce qui le remplace en 2023 ?
 
-   **Fait dans `sdw-sosa-ssn`** : la spec 2023 cite désormais chacun de ses
-   modules par son IRI d'ontologie **et** son IRI de version, pour que la
-   prochaine édition n'ait pas à rouvrir la REC 2023 —
-   [PR w3c/sdw-sosa-ssn#524](https://github.com/w3c/sdw-sosa-ssn/pull/524),
-   branche `cite-version-iris`. Complétés : les huit modules de bas niveau du
-   cœur et les deux graphes de termes dépréciés dans § Distribution, et les
-   alignements BFO/CCO et IDO. Un script vérifie que les 26 ontologies déclarées
-   sous `/ns/sosa/` ou `/ns/ssn/` ont bien leurs deux IRI citées, et
-   `check_repository.py` rend la même sortie qu'avant. Trois points sont soumis
-   au WG dans la PR : documenter ou non `sosa/dep/` et `ssn/dep/`, l'écart avec
-   le RDF qui ne déclare `owl:versionIRI` que sur trois ontologies (point 1
-   ci-dessus), et le cas de `sosa-sdo.ttl` (point 5).
+4. **La spec 2017, ce qui reste de ton côté** : soumettre à Bert Bos que notre
+   bandeau est plus étoffé que les précédents, et caler la demande au Webmaster
+   sur la date de publication de la REC 2023. Le texte est prêt dans
+   [[modification-de-la-rec-2017]].
 
-4. **Le script de placement n'est pas committé.** Il est écrit et il tourne :
-   `sdw-sosa-ssn/ssn/scripts/place_namespace_files.py`. Je ne commite pas dans
-   ce dépôt sans ton accord — dis-moi si je le fais, et sur quelle branche.
-   Il faut aussi l'ajouter au tableau de `ssn/scripts/README.md`.
-
-5. **`check_repository.ldpy` a gagné `check_publication()`**, puisque tu l'avais
-   ouvert : la section `=== Ontology Declarations ===` est de retour, et deux
-   contrôles non fatals s'y ajoutent — toute ontologie déclarée doit avoir une
-   maison sous `/ns/sosa/` ou `/ns/ssn/` (`sosa-sdo.ttl` n'en a pas, il déclare
-   `https://example.org/…`), et toute `owl:versionIRI` doit être l'IRI
-   d'ontologie avec une édition de plus. À relire, et à committer avec le reste.
-
-   Au passage : sur la branche `ldpy-checks`, le script échoue déjà sur trois
-   contrôles qui n'ont rien à voir avec nous — liens internes cassés, termes
-   utilisés jamais définis, termes sans label ni définition.
+5. **La PR sur `sdw-sosa-ssn` pour les métadonnées de version de 2023** est à
+   ouvrir quand le point 1 est réglé : `dcat:version`, `dcat:hasVersion`,
+   `dcat:hasCurrentVersion`, `owl:priorVersion`, et la dépréciation soumise au
+   WG. L'approche et ce qui a été fait côté 2017 sont dans
+   [[metadonnees-de-version]].
 
 ## Prochaines étapes
 
-- Écrire les `.htaccess` : les racines `sosa/` et `ssn/` qui redirigent vers
-  l'édition courante, les IRI ancrées sur 2017, et les deux sous-arbres
-  d'édition. Le tableau des redirections attendues est dans [[redirections]].
-- Traiter le cas des IRI de version sans barre oblique servies depuis un dossier
-  (`…/sosa/2017/prov`, `…/ssn/2017/ext`) : `DirectorySlash` ou règle explicite.
+- Écrire les `.htaccess` selon [[politique-de-redirection]] : les racines
+  `sosa/` et `ssn/`, et les deux sous-arbres d'édition. Ceux de 2023 sont
+  aujourd'hui entièrement commentés, celui de `sosa/` applique encore la lecture
+  abandonnée pour `oboe` et `prov`.
+- Générer les règles de termes, et la table terme → ancre depuis la spec 2023.
 - Rétablir les cas de test commentés dans `ssn/regression-tests.sh` et
-  `sosa/regression-tests.sh`, puis les augmenter pour les deux éditions.
+  `sosa/regression-tests.sh`, puis les augmenter : deux éditions, IRI de version
+  sans barre oblique servies depuis un dossier, et les 404 de la règle 4.
+  **Huit cas existants changent de comportement attendu** (9, 10, 11, 21, 22,
+  23, 33, 34) : à signaler explicitement dans la PR.
 - Faire passer toute la suite contre l'Apache local avant d'ouvrir la PR.
 
 ## Bon à savoir
 
-L'environnement Python est `~/.venvs/ldpy` : il a rdflib et linked-data-python,
-donc il fait tourner aussi bien le script de placement que `check_repository.ldpy`.
-Il n'y a plus de `.venv` dans ce dépôt.
+L'environnement Python est `~/.venvs/ldpy` : rdflib et linked-data-python, donc
+il fait tourner le script de placement comme `check_repository.ldpy`.

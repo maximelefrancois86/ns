@@ -3,7 +3,8 @@
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
          xmlns:dc="http://purl.org/dc/terms/"
-         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:dcat="http://www.w3.org/ns/dcat#">
 
   <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuation">
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
@@ -86,6 +87,10 @@
 
   <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/prov">
     <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2017/prov"/>
+    <dcat:version>2017</dcat:version>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2017/prov"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/prov"/>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/prov"/>
     <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-12-14</dc:created>
     <dc:creator>Simon J D Cox</dc:creator>
     <dc:creator>

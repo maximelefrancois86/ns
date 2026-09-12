@@ -147,3 +147,7 @@ _:Bf369de341d58da3c28edc72c7c0f063a <http://www.w3.org/2002/07/owl#onProperty> <
 _:Bf369de341d58da3c28edc72c7c0f063a <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:Bf369de341d58da3c28edc72c7c0f063a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.w3.org/ns/ssn/ext> <http://www.w3.org/2002/07/owl#versionIRI> <http://www.w3.org/ns/ssn/2017/ext> .
+<http://www.w3.org/ns/ssn/ext> <http://www.w3.org/ns/dcat#version> "2017" .
+<http://www.w3.org/ns/ssn/ext> <http://www.w3.org/ns/dcat#hasVersion> <http://www.w3.org/ns/ssn/2017/ext> .
+<http://www.w3.org/ns/ssn/ext> <http://www.w3.org/ns/dcat#hasCurrentVersion> <http://www.w3.org/ns/ssn/2017/ext> .
+<http://www.w3.org/ns/ssn/ext> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .

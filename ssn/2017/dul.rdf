@@ -16,9 +16,15 @@
      xmlns:old-ssn="http://purl.oclc.org/NET/ssnx/ssn#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:sr="http://www.w3.org/ns/sosa/sampling/"
-     xmlns:sosa="http://www.w3.org/ns/sosa/">
+     xmlns:sosa="http://www.w3.org/ns/sosa/"
+     xmlns:dcat="http://www.w3.org/ns/dcat#">
     <owl:Ontology rdf:about="http://www.w3.org/ns/ssn/dul">
         <owl:versionIRI rdf:resource="http://www.w3.org/ns/ssn/2017/dul"/>
+        <dcat:version>2017</dcat:version>
+        <dcat:hasVersion rdf:resource="http://www.w3.org/ns/ssn/2017/dul"/>
+        <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/ssn/2017/dul"/>
+        <dcterms:isReplacedBy rdf:resource="http://www.w3.org/ns/sosa/dul"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/sampling"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
     </owl:Ontology>

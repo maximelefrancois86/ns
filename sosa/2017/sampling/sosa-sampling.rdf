@@ -3,10 +3,15 @@
          xmlns:owl="http://www.w3.org/2002/07/owl#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-         xmlns:schema="http://schema.org/">
+         xmlns:schema="http://schema.org/"
+         xmlns:dcat="http://www.w3.org/ns/dcat#">
 
   <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/sampling/">
     <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2017/sampling/"/>
+    <dcat:version>2017</dcat:version>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2017/sampling/"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/sampling/"/>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/sampling/"/>
     <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
   </owl:Ontology>

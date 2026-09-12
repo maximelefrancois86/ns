@@ -14,6 +14,7 @@
 @prefix ssn-ext: <http://www.w3.org/ns/ssn/ext/> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 sosa:Actuation
   rdfs:subClassOf [
@@ -207,6 +208,10 @@ sosa:usedProcedure
 ssn:ext
   a owl:Ontology ;
   owl:versionIRI <http://www.w3.org/ns/ssn/2017/ext> ;
+  dcat:version "2017" ;
+  dcat:hasVersion <http://www.w3.org/ns/ssn/2017/ext> ;
+  dcat:hasCurrentVersion <http://www.w3.org/ns/ssn/2017/ext> ;
+  owl:deprecated true ;
   dcterms:created "2018-03-08"^^xsd:date ;
   dcterms:creator <http://orcid.org/0000-0002-3884-3420> ;
   dcterms:description """Some extensions to the SSN Ontology, to support

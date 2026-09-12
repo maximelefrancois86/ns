@@ -183,6 +183,14 @@
   }, {
     "@id" : "ssn:ext",
     "@type" : "owl:Ontology",
+    "dcat:version" : "2017",
+    "dcat:hasVersion" : {
+      "@id" : "http://www.w3.org/ns/ssn/2017/ext"
+    },
+    "dcat:hasCurrentVersion" : {
+      "@id" : "http://www.w3.org/ns/ssn/2017/ext"
+    },
+    "owl:deprecated" : true,
     "owl:versionIRI" : {
       "@id" : "http://www.w3.org/ns/ssn/2017/ext"
     },
@@ -201,6 +209,7 @@
     "imports" : "http://www.w3.org/ns/ssn/"
   } ],
   "@context" : {
+    "dcat" : "http://www.w3.org/ns/dcat#",
     "domainIncludes" : {
       "@id" : "http://schema.org/domainIncludes",
       "@type" : "@id"

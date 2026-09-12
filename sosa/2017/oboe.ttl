@@ -10,6 +10,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 oboe-core:Characteristic
   owl:equivalentClass sosa:ObservableProperty ;
@@ -56,6 +57,10 @@ sosa:hasFeatureOfInterest
 <http://www.w3.org/ns/sosa/oboe>
   rdf:type owl:Ontology ;
   owl:versionIRI <http://www.w3.org/ns/sosa/2017/oboe> ;
+  dcat:version "2017" ;
+  dcat:hasVersion <http://www.w3.org/ns/sosa/2017/oboe> ;
+  dcat:hasVersion <http://www.w3.org/ns/sosa/2023/oboe> ;
+  dcat:hasCurrentVersion <http://www.w3.org/ns/sosa/2023/oboe> ;
   dc:creator "Simon J D COX" ;
   dct:created "2017-03-05"^^xsd:date ;
   dct:creator <http://orcid.org/0000-0002-3884-3420> ;

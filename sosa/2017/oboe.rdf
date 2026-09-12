@@ -3,7 +3,8 @@
          xmlns:owl="http://www.w3.org/2002/07/owl#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:dc11="http://purl.org/dc/elements/1.1/"
-         xmlns:dc="http://purl.org/dc/terms/">
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:dcat="http://www.w3.org/ns/dcat#">
 
   <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Characteristic">
     <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
@@ -73,6 +74,10 @@
 
   <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/oboe">
     <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2017/oboe"/>
+    <dcat:version>2017</dcat:version>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2017/oboe"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/oboe"/>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/oboe"/>
     <dc11:creator>Simon J D COX</dc11:creator>
     <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-03-05</dc:created>
     <dc:creator rdf:resource="http://orcid.org/0000-0002-3884-3420"/>

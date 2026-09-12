@@ -145,7 +145,7 @@ demandait une redirection permanente de `sosa/oboe` et de `sosa/prov` vers leur
 emplacement 2017, tout en disant par ailleurs que ces deux modules ont été mis à
 jour en 2023. Les deux sont incompatibles, et les fichiers tranchent : l'édition
 2023 réutilise ces IRI d'ontologie. La question est instruite pour elle-même
-dans [[redirections]], qui retient que l'IRI d'ontologie suit l'édition courante
+dans [[politique-de-redirection]], qui retient que l'IRI d'ontologie suit l'édition courante
 tant que le WG n'a pas dit le contraire. **Les deux dernières lignes du tableau
 ci-dessus en dépendent** : si le WG choisissait d'ancrer `oboe` et `prov` sur
 2017, leurs liens de § 6.4.3 et § 6.5.3 n'auraient plus à bouger, et les deux

@@ -1,69 +1,39 @@
 #!/bin/sh
 set -eu
 
+# Run the namespace regression tests against the Apache container.  Each
+# namespace has one test file now, covering both of its editions.
+
 target="${1:-all}"
+host="${HOST:-http://web}"
 
 wait_for_url() {
-    url="$1"
     attempts=30
-
     while [ "$attempts" -gt 0 ]; do
-        if curl -fsSI "$url" >/dev/null 2>&1; then
+        if curl -fsSI "$1" >/dev/null 2>&1; then
             return 0
         fi
-
         attempts=$((attempts - 1))
         sleep 1
     done
-
-    echo "Timed out waiting for $url" >&2
+    echo "Timed out waiting for $1" >&2
     exit 1
 }
 
-run_script() {
-    script_path="$1"
-    namespace_path="${script_path#/workspace/}"
-    namespace_path="${namespace_path%/regression-tests.sh}"
-    base_url="http://web/ns/$namespace_path"
-
-    case "$namespace_path" in
-        sosa/prov)
-            base_url="http://web/ns/sosa/2017/prov"
-            ;;
-        sosa/sampling)
-            base_url="http://web/ns/sosa/2023/sampling"
-            ;;
-        ssn/systems)
-            base_url="http://web/ns/ssn/2017/systems"
-            ;;
-    esac
-
-    echo "Running $namespace_path/regression-tests.sh"
-    wait_for_url "$base_url/"
-    BASE_URL="$base_url" TEST_DELAY="${TEST_DELAY:-0}" bash "$script_path"
-}
-
-run_tree() {
-    root="$1"
-
-    find "/workspace/$root" -type f -name 'regression-tests.sh' | sort | while IFS= read -r script_path; do
-        run_script "$script_path"
-    done
+run() {
+    namespace="$1"
+    echo "Running $namespace/regression-tests.sh against $host/ns/$namespace"
+    wait_for_url "$host/ns/$namespace/2023/"
+    BASE_URL="$host/ns/$namespace" \
+    SOSA_BASE="$host/ns/sosa" \
+    SSN_BASE="$host/ns/ssn" \
+    TEST_DELAY="${TEST_DELAY:-0}" \
+        bash "/workspace/$namespace/regression-tests.sh"
 }
 
 case "$target" in
-    sosa)
-        run_tree sosa
-        ;;
-    ssn)
-        run_tree ssn
-        ;;
-    all)
-        run_tree sosa
-        run_tree ssn
-        ;;
-    *)
-        echo "Usage: run-tests [sosa|ssn|all]" >&2
-        exit 2
-        ;;
+    sosa) run sosa ;;
+    ssn)  run ssn ;;
+    all)  run sosa; run ssn ;;
+    *)    echo "Usage: run-tests [sosa|ssn|all]" >&2; exit 2 ;;
 esac

@@ -36,15 +36,22 @@ La politique complète est dans `steering/decisions/politique-de-redirection.md`
 
 | Dépôt | Rôle |
 |---|---|
-| `../sdw-sosa-ssn` (`w3c/sdw-sosa-ssn`) | **Source de vérité** des fichiers RDF (`ssn/rdf/`) et de la spécification 2023. Y vit aussi tout l'outillage : `ssn/scripts/place_namespace_files.py`, qui place les fichiers ici, et `ssn/scripts/check_repository.ldpy`, qui dit quelles ontologies existent et ce que chaque fichier déclare. **Aucun script ne vit dans `ns`.** |
+| `../sdw-sosa-ssn` (`w3c/sdw-sosa-ssn`) | **Source de vérité** des fichiers RDF (`ssn/rdf/`) et de la spécification 2023. Y vit aussi tout l'outillage : `ssn/scripts/publish_namespace.py`, qui place les fichiers ici et écrit les règles qui les servent, et `ssn/scripts/check_repository.ldpy`, qui dit quelles ontologies existent et ce que chaque fichier déclare. **Aucun script ne vit dans `ns`.** |
 | `w3c/sdw`, branche `gh-pages` | Editor's draft de la spécification 2017. `ssn/index.html` est devenu une page de redirection ; le texte complet y est toujours, sous `ssn/index-ssn.html`. La REC publiée, elle, est un instantané figé du côté W3C : voir `steering/decisions/modification-de-la-rec-2017.md`. |
 
 ## Règles de travail sur le contenu
 
 - **Les fichiers RDF de 2023 ne sont jamais écrits à la main ici.** Ils sont
-  placés depuis `../sdw-sosa-ssn` par un script, qui déduit leur emplacement de
-  l'IRI d'ontologie et de l'IRI de version que chaque fichier déclare. Une
-  correction sur un fichier RDF se fait dans `sdw-sosa-ssn`, puis on resynchronise.
+  placés depuis `../sdw-sosa-ssn` par `publish_namespace.py`, qui déduit leur
+  emplacement de l'IRI d'ontologie et de l'IRI de version que chaque fichier
+  déclare. Une correction sur un fichier RDF se fait dans `sdw-sosa-ssn`, puis
+  on resynchronise.
+- **Une partie des `.htaccess` est écrite par ce même script.** Dans
+  `sosa/.htaccess` et `ssn/.htaccess`, le bloc entre les marqueurs
+  `# BEGIN generated term rules` et `# END` porte les règles de modules et de
+  termes ; tout le reste de ces deux fichiers est écrit à la main. Les
+  `.htaccess` de l'arbre `2023/` sont entièrement écrits par le script. Ceux de
+  `2017/` sont écrits à la main, comme l'édition qu'ils servent.
 - **Les fichiers de 2017 ne changent pas d'ontologie.** Aucun terme, aucun
   axiome, aucune définition : la Recommendation de 2017 reste ce qu'elle est.
   Seules leurs **métadonnées de version** se complètent — `owl:versionIRI`, et

@@ -2,53 +2,49 @@
 <rdf:RDF
   xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:dcterms="http://purl.org/dc/terms/"
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:schema1="http://schema.org/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
-  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/sampling/hasSampleRelationship">
-    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
-    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/sampling/SampleRelationship"/>
-    <rdfs:label xml:lang="en">has sample relationship</rdfs:label>
-    <skos:definition xml:lang="en">links a Sample to a SampleRelationship</skos:definition>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/sampling/natureOfRelationship">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/sampling/SampleRelationship"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/sampling/RelationshipNature"/>
     <rdfs:isDefinedBy>
       <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/sampling/">
-        <owl:imports rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
         <dcterms:creator>
-          <foaf:Agent rdf:nodeID="ne281381b1aeb49ea8c2b4447b41a9fc6b1">
+          <foaf:Agent rdf:nodeID="cb0">
             <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
           </foaf:Agent>
         </dcterms:creator>
         <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
         <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
-        <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/sampling/"/>
-        <owl:priorVersion rdf:resource="http://www.w3.org/ns/sosa/2017/sampling/"/>
         <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
+        <owl:imports rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+        <owl:priorVersion rdf:resource="http://www.w3.org/ns/sosa/2017/sampling/"/>
+        <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/sampling/"/>
       </owl:Ontology>
     </rdfs:isDefinedBy>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/sampling/natureOfRelationship">
-    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/sampling/SampleRelationship"/>
-    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/sampling/RelationshipNature"/>
     <rdfs:label xml:lang="en">nature of (sample) relationship</rdfs:label>
     <skos:definition xml:lang="en">links a SampleRelationship to an indication of the nature of the relationship</skos:definition>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sampling/"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/sampling/relatedSample">
     <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/sampling/SampleRelationship"/>
     <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sampling/"/>
     <rdfs:label xml:lang="en">related sample</rdfs:label>
     <skos:definition xml:lang="en">links a SampleRelationship to the related Sample</skos:definition>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sampling/"/>
   </owl:ObjectProperty>
-  <owl:Class rdf:about="http://www.w3.org/ns/sosa/sampling/SampleRelationship">
-    <rdfs:label xml:lang="en">Sample relationship</rdfs:label>
-    <skos:definition xml:lang="en">relationship from one Sample to another Sample</skos:definition>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/sampling/hasSampleRelationship">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/sampling/SampleRelationship"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sampling/"/>
-  </owl:Class>
+    <rdfs:label xml:lang="en">has sample relationship</rdfs:label>
+    <skos:definition xml:lang="en">links a Sample to a SampleRelationship</skos:definition>
+  </owl:ObjectProperty>
   <owl:Class rdf:about="http://www.w3.org/ns/sosa/sampling/RelationshipNature">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sampling/"/>
     <rdfs:label xml:lang="en">Nature of relationship (between samples)</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:definition xml:lang="en">the nature of a relationship between two Samples</skos:definition>
@@ -62,6 +58,10 @@
     <skos:example>Split of core sample</skos:example>
     <skos:example>Station along a traverse</skos:example>
     <skos:example>Subsample with grain size smaller than specified seive mesh</skos:example>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/sampling/SampleRelationship">
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sampling/"/>
+    <rdfs:label xml:lang="en">Sample relationship</rdfs:label>
+    <skos:definition xml:lang="en">relationship from one Sample to another Sample</skos:definition>
   </owl:Class>
 </rdf:RDF>

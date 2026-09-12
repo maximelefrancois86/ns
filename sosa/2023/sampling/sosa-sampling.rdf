@@ -2,11 +2,12 @@
 <rdf:RDF
   xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
-  xmlns:schema1="http://schema.org/"
-  xmlns:dcterms="http://purl.org/dc/terms/"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:schema1="http://schema.org/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
 >
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/sampling/natureOfRelationship">
     <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/sampling/SampleRelationship"/>
@@ -24,6 +25,11 @@
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
         <owl:priorVersion rdf:resource="http://www.w3.org/ns/sosa/2017/sampling/"/>
         <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/sampling/"/>
+        <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/sampling/"/>
+        <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2017/sampling/"/>
+        <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/sampling/"/>
+        <dcat:previousVersion rdf:resource="http://www.w3.org/ns/sosa/2017/sampling/"/>
+        <dcat:version>2023</dcat:version>
       </owl:Ontology>
     </rdfs:isDefinedBy>
     <rdfs:label xml:lang="en">nature of (sample) relationship</rdfs:label>

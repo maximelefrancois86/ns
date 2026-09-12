@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:dcterms="http://purl.org/dc/terms/"
 >
   <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation">
@@ -31,6 +32,13 @@
     <rdfs:label xml:lang="en">Alignment of SOSA with PROV-O</rdfs:label>
     <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
+    <owl:priorVersion rdf:resource="http://www.w3.org/ns/sosa/2017/prov"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/prov"/>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/prov"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2017/prov"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/prov"/>
+    <dcat:previousVersion rdf:resource="http://www.w3.org/ns/sosa/2017/prov"/>
+    <dcat:version>2023</dcat:version>
   </owl:Ontology>
   <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Property">
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>

@@ -3,6 +3,7 @@
   xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:dcterms="http://purl.org/dc/terms/"
 >
@@ -31,6 +32,10 @@
     <owl:imports rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/ssn/obs/"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/ssn/sam/"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/ssn/2023/oms/"/>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/ssn/2023/oms/"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/ssn/2023/oms/"/>
+    <dcat:version>2023</dcat:version>
   </owl:Ontology>
   <rdf:Description rdf:about="http://www.w3.org/ns/sosa/oms/madeOnPlatform">
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>

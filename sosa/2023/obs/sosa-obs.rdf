@@ -3,6 +3,7 @@
   xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:dcterms="http://purl.org/dc/terms/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -191,6 +192,10 @@
         <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
         <dcterms:title xml:lang="en">Sensor, Observation, Sample, and Actuator (SOSA) Ontology - actuation module</dcterms:title>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/obs/"/>
+        <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/obs/"/>
+        <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/obs/"/>
+        <dcat:version>2023</dcat:version>
       </owl:Ontology>
     </rdfs:isDefinedBy>
     <rdfs:label xml:lang="en">was originated by</rdfs:label>

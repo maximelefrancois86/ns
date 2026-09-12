@@ -2,13 +2,14 @@
 <rdf:RDF
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:dcterms="http://purl.org/dc/terms/"
-  xmlns:sosa="http://www.w3.org/ns/sosa/"
-  xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:voaf="http://purl.org/vocommons/voaf#"
+  xmlns:sosa="http://www.w3.org/ns/sosa/"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
   <sosa:Property rdf:about="http://www.w3.org/ns/sosa/system-capability-properties#MinMeasurableHumidity">
     <rdfs:isDefinedBy>
@@ -31,6 +32,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
         <rdfs:comment xml:lang="en">Please report any errors to the W3C Spatio-temporal Data on the Web Working Group via the SDW WG Public List public-sdw-wg@w3.org</rdfs:comment>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/systems/"/>
+        <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/system-capability-properties#"/>
+        <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/system-capability-properties#"/>
+        <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/system-capability-properties#"/>
+        <dcat:version>2023</dcat:version>
       </voaf:Vocabulary>
     </rdfs:isDefinedBy>
     <rdfs:label xml:lang="en">minimum measurable humidity</rdfs:label>

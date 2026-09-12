@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
   xmlns:owl="http://www.w3.org/2002/07/owl#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:dcterms="http://purl.org/dc/terms/"
 >
@@ -17,11 +18,16 @@
     <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
     <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-06</dcterms:modified>
+    <dcterms:replaces rdf:resource="http://www.w3.org/ns/ssn/dul"/>
     <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
     <rdfs:comment xml:lang="en">Alignment of the the W3C/OGC SOSA Ontology with the DOLCE UltraLite upper ontology (DUL).</rdfs:comment>
     <rdfs:label xml:lang="en">Alignment of SOSA with DUL</rdfs:label>
     <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/dul"/>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/dul"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/dul"/>
+    <dcat:version>2023</dcat:version>
   </owl:Ontology>
   <rdf:Description rdf:about="http://www.w3.org/ns/sosa/System">
     <rdfs:subClassOf>

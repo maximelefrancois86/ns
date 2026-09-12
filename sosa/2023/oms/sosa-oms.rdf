@@ -2,6 +2,7 @@
 <rdf:RDF
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:dcterms="http://purl.org/dc/terms/"
@@ -43,12 +44,17 @@
         <dcterms:description xml:lang="en">This ontology is based on the SOSA Ontology by the W3C/OGC Spatial Data on the Web Working Group, supplemented by some classes and properties required to implement ISO 19156:2023 .</dcterms:description>
         <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
         <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+        <dcterms:replaces rdf:resource="http://www.w3.org/ns/sosa/om"/>
         <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
         <dcterms:source rdf:resource="https://docs.ogc.org/as/20-082r4/20-082r4.html"/>
         <dcterms:title xml:lang="en">OMS Ontology - based on (SOSA) Ontology</dcterms:title>
         <rdfs:comment>The original source of each resource is indicated by the rdfs:isDefinedBy property</rdfs:comment>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+        <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/oms/"/>
+        <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/oms/"/>
+        <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/oms/"/>
+        <dcat:version>2023</dcat:version>
       </owl:Ontology>
     </rdfs:isDefinedBy>
     <rdfs:label xml:lang="en">valid time</rdfs:label>

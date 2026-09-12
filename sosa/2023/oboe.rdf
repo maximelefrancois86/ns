@@ -3,6 +3,7 @@
   xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:dcterms="http://purl.org/dc/terms/"
 >
@@ -24,6 +25,13 @@
     <rdfs:label>OBOE -&gt; SOSA map</rdfs:label>
     <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+    <owl:priorVersion rdf:resource="http://www.w3.org/ns/sosa/2017/oboe"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/oboe"/>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/oboe"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2017/oboe"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/oboe"/>
+    <dcat:previousVersion rdf:resource="http://www.w3.org/ns/sosa/2017/oboe"/>
+    <dcat:version>2023</dcat:version>
   </owl:Ontology>
   <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic">
     <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>

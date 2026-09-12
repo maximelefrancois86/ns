@@ -2,6 +2,7 @@
 <rdf:RDF
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:dcterms="http://purl.org/dc/terms/"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
@@ -35,7 +36,11 @@
     <rdfs:label xml:lang="en">Alignment of SOSA with IDO</rdfs:label>
     <owl:imports rdf:resource="http://rds.posccaesar.org/ontology/lis14/ont/core/"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/ido"/>
     <skos:note xml:lang="en">A caution is advised if using the provided alignment with IDO major versions higher than 4.0</skos:note>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/ido"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/ido"/>
+    <dcat:version>2023</dcat:version>
   </owl:Ontology>
   <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeSamplingHasResult">
     <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>

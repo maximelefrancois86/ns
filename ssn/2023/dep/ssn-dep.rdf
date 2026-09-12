@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
-  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
   <owl:Class rdf:about="http://www.w3.org/ns/ssn/Stimulus">
     <rdfs:comment xml:lang="en">An event in the real world that 'triggers' the Sensor. The properties associated to the Stimulus may be different to the eventual observed Property. It is the event, not the object, that triggers the Sensor.</rdfs:comment>
@@ -29,6 +30,7 @@
         <rdfs:seeAlso rdf:resource="https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/common/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+        <owl:versionIRI rdf:resource="http://www.w3.org/ns/ssn/2023/dep/"/>
         <owl:versionInfo xml:lang="en">
   New modular version of the SSN ontology. 
   </owl:versionInfo>
@@ -40,6 +42,9 @@
   Axiomatization only uses sosa: terms. 
   </skos:historyNote>
         <skos:scopeNote>The SSN-DEP module contains deprecated terms in the ssn: namespace. </skos:scopeNote>
+        <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/ssn/2023/dep/"/>
+        <dcat:hasVersion rdf:resource="http://www.w3.org/ns/ssn/2023/dep/"/>
+        <dcat:version>2023</dcat:version>
       </owl:Ontology>
     </rdfs:isDefinedBy>
     <rdfs:label xml:lang="en">Stimulus</rdfs:label>

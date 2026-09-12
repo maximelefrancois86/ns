@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:dcterms="http://purl.org/dc/terms/"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
   <owl:Class rdf:about="http://www.w3.org/ns/sosa/SpatialSample">
     <rdfs:subClassOf>
@@ -35,7 +36,11 @@
     <rdfs:label xml:lang="en">Alignment of SOSA with DOLCE in OWL</rdfs:label>
     <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
     <owl:imports rdf:resource="https://w3id.org/DOLCE/OWL/DOLCEbasic"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/dolce"/>
     <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9</owl:versionInfo>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/dolce"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/dolce"/>
+    <dcat:version>2023</dcat:version>
   </owl:Ontology>
   <owl:Class rdf:about="http://www.w3.org/ns/sosa/SampleCollection">
     <rdfs:subClassOf>

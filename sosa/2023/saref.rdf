@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:dcterms="http://purl.org/dc/terms/"
@@ -30,6 +31,10 @@
     <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
     <owl:imports rdf:resource="https://saref.etsi.org/core/v4.1.1"/>
     <owl:imports rdf:resource="https://saref.etsi.org/saref4syst/v1.1.2"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/saref"/>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/saref"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/saref"/>
+    <dcat:version>2023</dcat:version>
   </owl:Ontology>
   <rdf:Description rdf:about="https://saref.etsi.org/core/hasStateOfInterest">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/hasProperty"/>
@@ -52,6 +57,9 @@
         <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
       </rdf:Description>
     </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/StatisticalSample">
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/sosa/phenomenonTime">
     <owl:equivalentProperty rdf:resource="https://saref.etsi.org/core/hasPhenomenonTime"/>
@@ -185,9 +193,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://saref.etsi.org/core/hasState">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/hasProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/StatisticalSample">
-    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeByActuator">
     <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/core/madeBy"/>

@@ -3,19 +3,10 @@
   xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:dcterms="http://purl.org/dc/terms/"
 >
-  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Result">
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
-    <rdfs:subClassOf>
-      <owl:Restriction rdf:nodeID="cb2675e26035931165b41e6386c77e165e8dfb70cd178168a652d718d393b5312f2">
-        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isResultOf"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-  </rdf:Description>
   <owl:Ontology rdf:about="http://www.w3.org/ns/ssn/common/">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-03</dcterms:created>
     <dcterms:creator>
@@ -31,7 +22,21 @@
     <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
     <dcterms:title xml:lang="en">SSN Ontology - core module</dcterms:title>
     <owl:imports rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/ssn/2023/common/"/>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/ssn/2023/common/"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/ssn/2023/common/"/>
+    <dcat:version>2023</dcat:version>
   </owl:Ontology>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Result">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb2675e26035931165b41e6386c77e165e8dfb70cd178168a652d718d393b5312f2">
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isResultOf"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Procedure">
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
     <rdfs:subClassOf>

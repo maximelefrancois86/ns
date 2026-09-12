@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:dcterms="http://purl.org/dc/terms/"
@@ -38,10 +39,14 @@
         <rdfs:comment xml:lang="en">Please report any errors to the W3C Spatial Data on the Web Working Group via the SDW WG Public List public-sdw-wg@w3.org</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/dep/"/>
         <owl:versionInfo xml:lang="en">
   New modular version of the SSN ontology. 
   </owl:versionInfo>
         <skos:scopeNote>The SOSA-DEP module contains deprecated terms in the sosa: namespace. </skos:scopeNote>
+        <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/dep/"/>
+        <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/dep/"/>
+        <dcat:version>2023</dcat:version>
       </owl:Ontology>
     </rdfs:isDefinedBy>
     <rdfs:label xml:lang="en">Actuatable Property</rdfs:label>
